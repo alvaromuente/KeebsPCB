@@ -978,50 +978,6 @@ F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 9300 13750 50  0
 	1    9100 13400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Mechanical:MountingHole H7
-U 1 1 5E63D297
-P 4800 18975
-F 0 "H7" H 4900 19021 50  0000 L CNN
-F 1 "Oval Mounting Hole" H 4900 18930 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_7mm_5.0x2.5mm" H 4800 18975 50  0001 C CNN
-F 3 "~" H 4800 18975 50  0001 C CNN
-	1    4800 18975
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H8
-U 1 1 5E63D4E1
-P 4800 19225
-F 0 "H8" H 4900 19271 50  0000 L CNN
-F 1 "Oval Mounting Hole" H 4900 19180 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_BackOnly_7mm_5.0x2.5mm" H 4800 19225 50  0001 C CNN
-F 3 "~" H 4800 19225 50  0001 C CNN
-	1    4800 19225
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H9
-U 1 1 5E63D910
-P 4800 19475
-F 0 "H9" H 4900 19521 50  0000 L CNN
-F 1 "Oval Mounting Hole" H 4900 19430 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_7mm_5.0x2.5mm" H 4800 19475 50  0001 C CNN
-F 3 "~" H 4800 19475 50  0001 C CNN
-	1    4800 19475
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H10
-U 1 1 5E64C744
-P 4800 19725
-F 0 "H10" H 4900 19771 50  0000 L CNN
-F 1 "Oval Mounting Hole" H 4900 19680 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_BackOnly_7mm_5.0x2.5mm" H 4800 19725 50  0001 C CNN
-F 3 "~" H 4800 19725 50  0001 C CNN
-	1    4800 19725
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9475 16275 9550 16275
 $Comp
