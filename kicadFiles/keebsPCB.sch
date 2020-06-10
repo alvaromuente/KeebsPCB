@@ -13,1149 +13,18 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:C_Small CSI1
-U 1 1 5C44CEDC
-P 13875 20225
-F 0 "CSI1" V 13975 20225 39  0000 C CNN
-F 1 "10u" V 13775 20225 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 13875 20225 50  0001 C CNN
-F 3 "~" H 13875 20225 50  0001 C CNN
-	1    13875 20225
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C_Small CSO1
-U 1 1 5C44DAFA
-P 14575 20250
-F 0 "CSO1" V 14675 20250 39  0000 C CNN
-F 1 "1u" V 14450 20250 39  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 14575 20250 50  0001 C CNN
-F 3 "~" H 14575 20250 50  0001 C CNN
-	1    14575 20250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	14575 19875 14575 20150
-Wire Wire Line
-	13925 19875 13875 19875
-Wire Wire Line
-	13875 19875 13875 20125
-Connection ~ 13875 19875
-Wire Wire Line
-	13875 19875 13875 19400
-Wire Wire Line
-	13650 19875 13875 19875
-Text GLabel 14875 19875 2    50   Output ~ 0
-3.3V
-Text GLabel 22150 17100 2    50   BiDi ~ 0
-D+
-Text GLabel 22150 17350 2    50   BiDi ~ 0
-D-
-Wire Wire Line
-	22150 17100 22100 17100
-Wire Wire Line
-	22150 17350 22100 17350
-$Comp
-L Regulator_Linear:MCP1700-3302E_SOT23 U3
-U 1 1 5D83639E
-P 14225 19875
-F 0 "U3" H 14225 20073 31  0000 C CNN
-F 1 "MCP1700-3302E_SOT23" H 14225 20011 31  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 14225 20100 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826C.pdf" H 14225 19875 50  0001 C CNN
-	1    14225 19875
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13875 20325 13875 20475
-Wire Wire Line
-	14575 20475 14575 20350
-Wire Wire Line
-	14225 20175 14225 20475
-Connection ~ 14225 20475
-Wire Wire Line
-	14525 19875 14575 19875
-$Comp
-L power:GND #PWR018
-U 1 1 5D9C16B4
-P 14225 20550
-F 0 "#PWR018" H 14225 20300 50  0001 C CNN
-F 1 "GND" H 14230 20422 50  0000 R CNN
-F 2 "" H 14225 20550 50  0001 C CNN
-F 3 "" H 14225 20550 50  0001 C CNN
-	1    14225 20550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14225 20550 14225 20475
-$Comp
-L Switch:SW_Push SWRST1
-U 1 1 5E070BED
-P 13475 17775
-F 0 "SWRST1" H 13475 17975 31  0000 C CNN
-F 1 "SW_Push" H 13475 17954 31  0001 C CNN
-F 2 "acheron_Hardware:smdPushBtn" H 13475 17975 50  0001 C CNN
-F 3 "" H 13475 17975 50  0001 C CNN
-	1    13475 17775
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D DRST1
-U 1 1 5E071566
-P 13975 17775
-F 0 "DRST1" V 13944 17854 31  0000 L CNN
-F 1 "1N4148" V 14006 17854 31  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" H 13975 17775 50  0001 C CNN
-F 3 "~" H 13975 17775 50  0001 C CNN
-	1    13975 17775
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small RRST1
-U 1 1 5E07225E
-P 14250 17975
-F 0 "RRST1" V 14175 17900 31  0000 L CNN
-F 1 "100k" V 14250 17925 31  0000 L CNN
-F 2 "acheron_Components:R_SMD_1026" H 14250 17975 50  0001 C CNN
-F 3 "~" H 14250 17975 50  0001 C CNN
-	1    14250 17975
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CRST1
-U 1 1 5E072855
-P 14400 17975
-F 0 "CRST1" H 14350 17900 31  0000 R CNN
-F 1 "10u" H 14375 18050 31  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 14400 17975 50  0001 C CNN
-F 3 "~" H 14400 17975 50  0001 C CNN
-	1    14400 17975
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C_Small CRST2
-U 1 1 5E0C1B45
-P 14400 17025
-F 0 "CRST2" H 14600 16975 31  0000 R CNN
-F 1 "4.7n" H 14525 17100 31  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 14400 17025 50  0001 C CNN
-F 3 "~" H 14400 17025 50  0001 C CNN
-	1    14400 17025
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 5E65AF3C
-P 13500 17175
-F 0 "#PWR05" H 13500 16925 50  0001 C CNN
-F 1 "GND" V 13505 17048 31  0000 R CNN
-F 2 "" H 13500 17175 50  0001 C CNN
-F 3 "" H 13500 17175 50  0001 C CNN
-	1    13500 17175
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR09
-U 1 1 5E65C8C3
-P 14250 18125
-F 0 "#PWR09" H 14250 17875 50  0001 C CNN
-F 1 "GND" H 14255 17966 31  0000 C CNN
-F 2 "" H 14250 18125 50  0001 C CNN
-F 3 "" H 14250 18125 50  0001 C CNN
-	1    14250 18125
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR011
-U 1 1 5E65CDAB
-P 14400 18125
-F 0 "#PWR011" H 14400 17875 50  0001 C CNN
-F 1 "GND" H 14405 17966 31  0000 C CNN
-F 2 "" H 14400 18125 50  0001 C CNN
-F 3 "" H 14400 18125 50  0001 C CNN
-	1    14400 18125
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14400 18125 14400 18075
-Wire Wire Line
-	14250 18125 14250 18075
-Wire Wire Line
-	13500 17175 13550 17175
-Wire Wire Line
-	14125 17775 14250 17775
-Wire Wire Line
-	14400 17775 14400 17875
-Connection ~ 14400 17775
-Wire Wire Line
-	14400 17775 14700 17775
-Wire Wire Line
-	14250 17775 14250 17875
-Connection ~ 14250 17775
-Wire Wire Line
-	14250 17775 14400 17775
-Wire Wire Line
-	14400 17125 14400 17175
-Connection ~ 14400 17175
-Wire Wire Line
-	14400 17175 14700 17175
-Wire Wire Line
-	14400 16925 14400 16875
-$Comp
-L power:GND #PWR010
-U 1 1 5EA2B7B0
-P 14400 16875
-F 0 "#PWR010" H 14400 16625 50  0001 C CNN
-F 1 "GND" H 14405 16716 31  0000 C CNN
-F 2 "" H 14400 16875 50  0001 C CNN
-F 3 "" H 14400 16875 50  0001 C CNN
-	1    14400 16875
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C_Small CB5
-U 1 1 5ED231C7
-P 21625 19575
-F 0 "CB5" V 21775 19575 31  0000 C CNN
-F 1 "100n" V 21725 19575 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 21625 19575 50  0001 C CNN
-F 3 "~" H 21625 19575 50  0001 C CNN
-	1    21625 19575
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	13950 17175 14400 17175
-Text GLabel 14700 17175 2    50   BiDi ~ 0
-NRST
-Text GLabel 14700 17775 2    50   BiDi ~ 0
-BOOT0
-Text GLabel 18600 17800 0    50   Input ~ 0
-NRST
-Text GLabel 20000 15900 1    50   Input ~ 0
-BOOT0
-Wire Wire Line
-	18600 17800 18650 17800
-Wire Wire Line
-	20000 15900 20000 15950
-Text Notes 13175 16400 0    100  Italic 20
-Hard reset circuit
-Text Notes 12750 18900 0    100  Italic 20
-Power supply and protection circuit
-Text GLabel 13650 19800 1    50   Output ~ 0
-5V
-Wire Wire Line
-	13650 19800 13650 19875
-Wire Wire Line
-	14375 19400 14575 19400
-Wire Wire Line
-	13875 19400 14075 19400
-Wire Wire Line
-	14575 19875 14575 19400
-Connection ~ 14575 19875
-Wire Wire Line
-	14225 20475 14575 20475
-Wire Wire Line
-	14575 19875 14875 19875
-Wire Wire Line
-	14225 20475 13875 20475
-Text GLabel 13275 17775 0    50   Input ~ 0
-3.3V
-Text GLabel 22150 16850 2    50   Input ~ 0
-SWDIO
-Wire Wire Line
-	22150 16850 22100 16850
-Text GLabel 21750 15900 1    50   Input ~ 0
-SWCLK
-Wire Wire Line
-	21750 15900 21750 15950
-Text Notes 13300 12075 0    100  Italic 20
-SWD
-$Comp
-L power:GND #PWR0103
-U 1 1 5CFDFC6D
-P 13250 13950
-F 0 "#PWR0103" H 13250 13700 50  0001 C CNN
-F 1 "GND" V 13255 13822 50  0000 R CNN
-F 2 "" H 13250 13950 50  0001 C CNN
-F 3 "" H 13250 13950 50  0001 C CNN
-	1    13250 13950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13925 13275 13850 13275
-Text GLabel 13925 13175 2    50   Input ~ 0
-SWCLK
-Text GLabel 13925 13275 2    50   Input ~ 0
-SWDIO
-Wire Wire Line
-	13850 13175 13925 13175
-Wire Wire Line
-	13250 13875 13250 13950
-Text GLabel 13350 12600 1    50   Input ~ 0
-3.3V
-Wire Wire Line
-	13350 12675 13350 12600
-Wire Wire Line
-	13925 12975 13850 12975
-Text GLabel 13925 12975 2    50   Input ~ 0
-NRST
-$Comp
-L Transistor_BJT:DTC123J QRST1
-U 1 1 5D249555
-P 13750 17275
-F 0 "QRST1" V 14075 17275 50  0000 C CNN
-F 1 "DTC123J" V 13984 17275 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 13750 17275 50  0001 L CNN
-F 3 "" H 13750 17275 50  0001 L CNN
-	1    13750 17275
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	13675 17775 13750 17775
-Wire Wire Line
-	13750 17525 13750 17775
-Connection ~ 13750 17775
-Wire Wire Line
-	13750 17775 13825 17775
-$Comp
-L acheronSymbols:STM32F072-LQFP48 U1
-U 1 1 5D4108EC
-P 20350 17700
-F 0 "U1" H 20275 17825 79  0000 L CNB
-F 1 "STM32F072-LQFP48" H 19750 17650 79  0000 L CNB
-F 2 "acheron_Components:LQFP-48_7x7mm_P0.5mm" H 20350 17700 50  0001 C CNN
-F 3 "" H 20350 17700 50  0001 C CNN
-	1    20350 17700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	21500 19400 21500 19575
-Wire Wire Line
-	21500 19575 21525 19575
-Wire Wire Line
-	21750 19400 21750 19575
-Wire Wire Line
-	21750 19575 21725 19575
-Text GLabel 21750 19900 3    50   Input ~ 0
-3.3V
-Connection ~ 21750 19575
-$Comp
-L power:GND #PWR0101
-U 1 1 5DA51D20
-P 21500 19900
-F 0 "#PWR0101" H 21500 19650 50  0001 C CNN
-F 1 "GND" V 21505 19772 50  0000 R CNN
-F 2 "" H 21500 19900 50  0001 C CNN
-F 3 "" H 21500 19900 50  0001 C CNN
-	1    21500 19900
-	1    0    0    -1  
-$EndComp
-Connection ~ 21500 19575
-$Comp
-L Device:C_Small CB2
-U 1 1 5DBAA682
-P 18475 18175
-F 0 "CB2" V 18625 18175 31  0000 C CNN
-F 1 "10n" V 18575 18175 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 18475 18175 50  0001 C CNN
-F 3 "~" H 18475 18175 50  0001 C CNN
-	1    18475 18175
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	18650 18050 18475 18050
-Wire Wire Line
-	18475 18050 18475 18075
-Wire Wire Line
-	18650 18300 18475 18300
-Wire Wire Line
-	18475 18300 18475 18275
-Text GLabel 18000 18300 0    50   Input ~ 0
-3.3V
-$Comp
-L power:GND #PWR0104
-U 1 1 5DBAA68F
-P 18000 18050
-F 0 "#PWR0104" H 18000 17800 50  0001 C CNN
-F 1 "GND" V 18005 17922 50  0000 R CNN
-F 2 "" H 18000 18050 50  0001 C CNN
-F 3 "" H 18000 18050 50  0001 C CNN
-	1    18000 18050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small CB3
-U 1 1 5DC1D2A1
-P 22275 16475
-F 0 "CB3" V 22425 16475 31  0000 C CNN
-F 1 "100n" V 22375 16475 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 22275 16475 50  0001 C CNN
-F 3 "~" H 22275 16475 50  0001 C CNN
-	1    22275 16475
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	22100 16600 22275 16600
-Wire Wire Line
-	22275 16600 22275 16575
-Wire Wire Line
-	22100 16350 22275 16350
-Wire Wire Line
-	22275 16350 22275 16375
-Text GLabel 22800 16350 2    50   Input ~ 0
-3.3V
-$Comp
-L power:GND #PWR0107
-U 1 1 5DC1D2AE
-P 22800 16600
-F 0 "#PWR0107" H 22800 16350 50  0001 C CNN
-F 1 "GND" V 22805 16472 50  0000 R CNN
-F 2 "" H 22800 16600 50  0001 C CNN
-F 3 "" H 22800 16600 50  0001 C CNN
-	1    22800 16600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small CB8
-U 1 1 5DC916F5
-P 19125 15775
-F 0 "CB8" V 19275 15775 31  0000 C CNN
-F 1 "100n" V 19225 15775 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 19125 15775 50  0001 C CNN
-F 3 "~" H 19125 15775 50  0001 C CNN
-	1    19125 15775
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	19250 15950 19250 15775
-Wire Wire Line
-	19250 15775 19225 15775
-Wire Wire Line
-	19000 15950 19000 15775
-Wire Wire Line
-	19000 15775 19025 15775
-Text GLabel 19000 15700 1    50   Input ~ 0
-3.3V
-Wire Wire Line
-	19000 15700 19000 15775
-Connection ~ 19000 15775
-$Comp
-L power:GND #PWR0108
-U 1 1 5DC91702
-P 19250 15700
-F 0 "#PWR0108" H 19250 15450 50  0001 C CNN
-F 1 "GND" V 19255 15572 50  0000 R CNN
-F 2 "" H 19250 15700 50  0001 C CNN
-F 3 "" H 19250 15700 50  0001 C CNN
-	1    19250 15700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	19250 15700 19250 15775
-Connection ~ 19250 15775
-Text GLabel 18575 16300 0    50   Input ~ 0
-3.3V
-Wire Wire Line
-	18575 16300 18625 16300
 Text Notes 575  22375 0    50   ~ 10
 [1] STM32F072x8 / STM32F072xB datasheet
 Text Notes 575  22225 0    100  ~ 20
 REFERENCES
 Text Notes 575  22475 0    50   ~ 0
 https://www.st.com/resource/en/datasheet/stm32f072rb.pdf
-$Comp
-L Device:C_Small CB7
-U 1 1 5DE73924
-P 18625 16150
-F 0 "CB7" H 18800 16125 31  0000 C CNN
-F 1 "100nF" H 18800 16175 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 18625 16150 50  0001 C CNN
-F 3 "~" H 18625 16150 50  0001 C CNN
-	1    18625 16150
-	-1   0    0    1   
-$EndComp
 Text Notes 575  22675 0    50   ~ 10
 [2] AN4080 Application note
 Text Notes 575  22775 0    50   ~ 0
 https://www.st.com/content/ccc/resource/technical/document/application_note/c9/19/d7/b8/6b/0e/4c/d3/DM00051986.pdf/files/DM00051986.pdf/jcr:content/translations/en.DM00051986.pdf
-$Comp
-L power:GND #PWR0109
-U 1 1 5DF14263
-P 18625 16000
-F 0 "#PWR0109" H 18625 15750 50  0001 C CNN
-F 1 "GND" V 18630 15872 50  0000 R CNN
-F 2 "" H 18625 16000 50  0001 C CNN
-F 3 "" H 18625 16000 50  0001 C CNN
-	1    18625 16000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	18625 16300 18625 16250
-Wire Wire Line
-	18625 16050 18625 16000
-Connection ~ 18625 16300
-Wire Wire Line
-	18625 16300 18650 16300
-$Comp
-L Device:C_Small CB4
-U 1 1 5E067AA7
-P 22550 16475
-F 0 "CB4" V 22700 16475 31  0000 C CNN
-F 1 "4.7uF" V 22650 16475 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 22550 16475 50  0001 C CNN
-F 3 "~" H 22550 16475 50  0001 C CNN
-	1    22550 16475
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	22275 16350 22550 16350
-Connection ~ 22275 16350
-Wire Wire Line
-	22275 16600 22550 16600
-Connection ~ 22275 16600
-Wire Wire Line
-	22550 16350 22550 16375
-Wire Wire Line
-	22550 16575 22550 16600
-Connection ~ 22550 16350
-Wire Wire Line
-	22550 16350 22800 16350
-Connection ~ 22550 16600
-Wire Wire Line
-	22550 16600 22800 16600
-$Comp
-L Device:C_Small CB1
-U 1 1 5E2290BA
-P 18225 18175
-F 0 "CB1" V 18375 18175 31  0000 C CNN
-F 1 "1uF" V 18325 18175 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 18225 18175 50  0001 C CNN
-F 3 "~" H 18225 18175 50  0001 C CNN
-	1    18225 18175
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	18000 18050 18225 18050
-Connection ~ 18475 18050
-Wire Wire Line
-	18000 18300 18225 18300
-Connection ~ 18475 18300
-Wire Wire Line
-	18225 18050 18225 18075
-Wire Wire Line
-	18225 18275 18225 18300
-Connection ~ 18225 18050
-Wire Wire Line
-	18225 18050 18475 18050
-Connection ~ 18225 18300
-Wire Wire Line
-	18225 18300 18475 18300
-$Comp
-L Device:C_Small CB6
-U 1 1 5E3EEF07
-P 21625 19850
-F 0 "CB6" V 21775 19850 31  0000 C CNN
-F 1 "4.7uF" V 21725 19850 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 21625 19850 50  0001 C CNN
-F 3 "~" H 21625 19850 50  0001 C CNN
-	1    21625 19850
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	21500 19850 21525 19850
-Wire Wire Line
-	21750 19575 21750 19850
-Wire Wire Line
-	21500 19575 21500 19850
-Wire Wire Line
-	21725 19850 21750 19850
-Wire Wire Line
-	21500 19900 21500 19850
-Connection ~ 21500 19850
-Wire Wire Line
-	21750 19900 21750 19850
-Connection ~ 21750 19850
-Wire Notes Line width 20
-	17600 15000 25850 15000
-Wire Notes Line width 20
-	25850 15000 25850 21000
-Wire Notes Line width 20
-	25850 21000 17600 21000
-Wire Notes Line width 20
-	17600 21000 17600 15000
-Text Notes 17700 15250 0    100  ~ 20
-MCU
-Wire Notes Line width 20
-	17600 15350 18150 15350
-Wire Notes Line width 20
-	18150 15350 18150 15000
-Wire Notes Line width 20
-	12650 16175 15200 16175
-Wire Notes Line width 20
-	15200 16175 15200 18475
-Wire Notes Line width 20
-	15200 18475 12650 18475
-Wire Notes Line width 20
-	12675 18675 15650 18675
-Wire Notes Line width 20
-	15650 18675 15650 20925
-Wire Notes Line width 20
-	15650 20925 12675 20925
-Wire Notes Line width 20
-	12675 20925 12675 18675
-Wire Notes Line width 20
-	12650 16175 12650 18475
-Wire Notes Line width 20
-	12675 18975 15650 18975
-$Comp
-L Device:D DS1
-U 1 1 5C44EA7A
-P 14225 19400
-F 0 "DS1" V 14194 19479 31  0000 L CNN
-F 1 "1N4148" V 14256 19479 31  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" H 14225 19400 50  0001 C CNN
-F 3 "~" H 14225 19400 50  0001 C CNN
-	1    14225 19400
-	1    0    0    -1  
-$EndComp
-$Comp
-L acheronSymbols:TYPE-C-31-M12_13 J1
-U 1 1 5D5405DA
-P 8875 16725
-F 0 "J1" H 8875 18150 50  0000 C CNN
-F 1 "TYPE-C-31-M12_13" H 8875 18050 50  0000 C CNN
-F 2 "acheron_Connectors:TYPE-C-31-M-12" V 8375 16775 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 9075 16775 50  0001 C CNN
-	1    8875 16725
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small RSH1
-U 1 1 5D5416FE
-P 8575 18375
-F 0 "RSH1" H 8634 18406 31  0000 L CNN
-F 1 "1M" H 8634 18344 31  0000 L CNN
-F 2 "acheron_Components:R_SMD_1026" H 8575 18375 50  0001 C CNN
-F 3 "~" H 8575 18375 50  0001 C CNN
-	1    8575 18375
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CSH1
-U 1 1 5D54218D
-P 8450 18375
-F 0 "CSH1" V 8600 18375 31  0000 C CNN
-F 1 "4.7nF" V 8550 18375 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8450 18375 50  0001 C CNN
-F 3 "~" H 8450 18375 50  0001 C CNN
-	1    8450 18375
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8575 18175 8575 18225
-Wire Wire Line
-	8575 18225 8450 18225
-Wire Wire Line
-	8450 18225 8450 18275
-Connection ~ 8575 18225
-Wire Wire Line
-	8575 18225 8575 18275
-Wire Wire Line
-	8450 18475 8450 18525
-Wire Wire Line
-	8450 18525 8575 18525
-Wire Wire Line
-	8575 18525 8575 18475
-Wire Wire Line
-	8575 18525 8575 18575
-Connection ~ 8575 18525
-$Comp
-L power:GND #PWR0102
-U 1 1 5D6F2C4A
-P 8575 18575
-F 0 "#PWR0102" H 8575 18325 50  0001 C CNN
-F 1 "GND" H 8575 18450 31  0000 C CNN
-F 2 "" H 8575 18575 50  0001 C CNN
-F 3 "" H 8575 18575 50  0001 C CNN
-	1    8575 18575
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0105
-U 1 1 5D7660D9
-P 8875 18275
-F 0 "#PWR0105" H 8875 18025 50  0001 C CNN
-F 1 "GND" H 8875 18150 31  0000 C CNN
-F 2 "" H 8875 18275 50  0001 C CNN
-F 3 "" H 8875 18275 50  0001 C CNN
-	1    8875 18275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8775 18175 8775 18225
-Wire Wire Line
-	8775 18225 8875 18225
-Wire Wire Line
-	8875 18225 8875 18175
-Wire Wire Line
-	8875 18275 8875 18225
-Connection ~ 8875 18225
-NoConn ~ 9475 17775
-NoConn ~ 9475 17875
-Wire Wire Line
-	9475 17025 9475 17125
-Wire Wire Line
-	9475 17125 9600 17125
-Connection ~ 9475 17125
-Text GLabel 9600 17125 2    50   BiDi ~ 0
-DBus-
-Wire Wire Line
-	9475 16825 9600 16825
-Text GLabel 9600 16825 2    50   BiDi ~ 0
-DBus+
-Wire Wire Line
-	9475 16725 9475 16825
-Connection ~ 9475 16825
-$Comp
-L Device:R_Small RCC1
-U 1 1 5DAD119A
-P 9650 16075
-F 0 "RCC1" V 9575 16075 31  0000 C CNN
-F 1 "5.1k" V 9650 16075 31  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 9650 16075 50  0001 C CNN
-F 3 "~" H 9650 16075 50  0001 C CNN
-	1    9650 16075
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 5DCFB88B
-P 9775 16275
-F 0 "#PWR0106" H 9775 16025 50  0001 C CNN
-F 1 "GND" H 9775 16150 31  0000 C CNN
-F 2 "" H 9775 16275 50  0001 C CNN
-F 3 "" H 9775 16275 50  0001 C CNN
-	1    9775 16275
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	9750 16275 9775 16275
-Wire Wire Line
-	9475 15575 9475 15675
-Wire Wire Line
-	9600 15675 9475 15675
-Connection ~ 9475 15675
-Text GLabel 9600 15675 2    50   Output ~ 0
-VBUS
-Text GLabel 8550 13300 0    50   BiDi ~ 0
-DBus-
-Text GLabel 8550 13500 0    50   BiDi ~ 0
-D-
-Text GLabel 9650 13300 2    50   BiDi ~ 0
-DBus+
-Text GLabel 9650 13500 2    50   BiDi ~ 0
-D+
-Wire Wire Line
-	8550 13300 8600 13300
-Wire Wire Line
-	8550 13500 8600 13500
-Wire Wire Line
-	9600 13500 9650 13500
-Wire Wire Line
-	9600 13300 9650 13300
-$Comp
-L Device:C_Small CUSB1
-U 1 1 5E01896F
-P 9250 12850
-F 0 "CUSB1" V 9150 12850 31  0000 C CNN
-F 1 "100n" V 9350 12850 31  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 9250 12850 50  0001 C CNN
-F 3 "~" H 9250 12850 50  0001 C CNN
-	1    9250 12850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9100 12900 9100 12850
-Wire Wire Line
-	9150 12850 9100 12850
-Connection ~ 9100 12850
-Wire Wire Line
-	9350 12850 9400 12850
-$Comp
-L power:GND #PWR0112
-U 1 1 5E173141
-P 9400 12850
-F 0 "#PWR0112" H 9400 12600 50  0001 C CNN
-F 1 "GND" H 9400 12725 31  0000 C CNN
-F 2 "" H 9400 12850 50  0001 C CNN
-F 3 "" H 9400 12850 50  0001 C CNN
-	1    9400 12850
-	0    -1   -1   0   
-$EndComp
-Text GLabel 9100 12775 1    50   Input ~ 0
-VBUS
-Wire Wire Line
-	9100 12775 9100 12850
-$Comp
-L power:GND #PWR0113
-U 1 1 5E1E97BE
-P 9100 13950
-F 0 "#PWR0113" H 9100 13700 50  0001 C CNN
-F 1 "GND" H 9100 13825 31  0000 C CNN
-F 2 "" H 9100 13950 50  0001 C CNN
-F 3 "" H 9100 13950 50  0001 C CNN
-	1    9100 13950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9100 13950 9100 13900
-Wire Notes Line width 20
-	12550 11850 14450 11850
-Wire Notes Line width 20
-	7800 14725 7800 19150
-Wire Notes Line width 20
-	7800 19150 10550 19150
-Wire Notes Line width 20
-	10550 19150 10550 14725
-Wire Notes Line width 20
-	10550 14725 7800 14725
-Text Notes 8525 14950 0    100  Italic 20
-USB Connector
-Wire Notes Line
-	8250 18075 8650 18075
-Wire Notes Line
-	8650 18075 8650 18750
-Wire Notes Line
-	8650 18750 8250 18750
-Wire Notes Line
-	8250 18750 8250 18075
-Text Notes 8225 18525 1    50   ~ 0
-Shield
-Wire Notes Line width 20
-	12550 12150 14450 12150
-Wire Notes Line width 20
-	12650 16500 15200 16500
-Wire Notes Line width 20
-	7800 15025 10550 15025
-Text Notes 8850 12250 0    100  Italic 20
-USD ESD
-Wire Notes Line width 20
-	8100 12050 8100 14200
-Wire Notes Line width 20
-	8100 14200 10300 14200
-Wire Notes Line width 20
-	10300 14200 10300 12050
-Wire Notes Line width 20
-	10300 12050 8100 12050
-Wire Notes Line width 20
-	8100 12300 10300 12300
-Text Label 8450 18225 2    20   ~ 0
-SHIELD
-$Comp
-L Device:Polyfuse_Small F1
-U 1 1 5ECE83A7
-P 13275 19875
-F 0 "F1" V 13070 19875 50  0000 C CNN
-F 1 "Polyfuse" V 13161 19875 50  0000 C CNN
-F 2 "acheron_Components:Fuse_1812_4532" H 13325 19675 50  0001 L CNN
-F 3 "~" H 13275 19875 50  0001 C CNN
-	1    13275 19875
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Schottky DF1
-U 1 1 5ECEA097
-P 13500 20050
-F 0 "DF1" V 13454 20129 50  0000 L CNN
-F 1 "RB060M-60TR" V 13545 20129 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" H 13500 20050 50  0001 C CNN
-F 3 "~" H 13500 20050 50  0001 C CNN
-	1    13500 20050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	13375 19875 13500 19875
-Connection ~ 13650 19875
-Wire Wire Line
-	13500 19875 13500 19900
-Wire Wire Line
-	13500 20200 13500 20250
-Connection ~ 13500 19875
-Wire Wire Line
-	13500 19875 13650 19875
-Wire Wire Line
-	13100 19875 13175 19875
-Text GLabel 13100 19875 0    50   Input ~ 0
-VBUS
-$Comp
-L power:GND #PWR0110
-U 1 1 5ED7F608
-P 13500 20250
-F 0 "#PWR0110" H 13500 20000 50  0001 C CNN
-F 1 "GND" H 13505 20122 50  0000 R CNN
-F 2 "" H 13500 20250 50  0001 C CNN
-F 3 "" H 13500 20250 50  0001 C CNN
-	1    13500 20250
-	1    0    0    -1  
-$EndComp
-Text Notes 22525 18000 0    50   ~ 10
-CBx are the bypass capacitors. Their value is specified in reference [2].
-$Comp
-L Mechanical:MountingHole H1
-U 1 1 5D878439
-P 4800 17475
-F 0 "H1" H 4900 17521 50  0000 L CNN
-F 1 "Half Side Hole " H 4900 17430 50  0000 L CNN
-F 2 "acheron_MountingHoles:halfSideHole" H 4800 17475 50  0001 C CNN
-F 3 "~" H 4800 17475 50  0001 C CNN
-	1    4800 17475
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 5D878CA4
-P 4800 17725
-F 0 "H2" H 4900 17771 50  0000 L CNN
-F 1 "Mounting Hole" H 4900 17680 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_7mm_5.0x2.5mm" H 4800 17725 50  0001 C CNN
-F 3 "~" H 4800 17725 50  0001 C CNN
-	1    4800 17725
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 5D8862CE
-P 4800 17975
-F 0 "H3" H 4900 18021 50  0000 L CNN
-F 1 "Oval Mounting Hole" H 4900 17930 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_BackOnly_7mm_5.0x2.5mm" H 4800 17975 50  0001 C CNN
-F 3 "~" H 4800 17975 50  0001 C CNN
-	1    4800 17975
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 5D8866EC
-P 4800 18225
-F 0 "H4" H 4900 18271 50  0000 L CNN
-F 1 "Oval Mounting Hole" H 4900 18180 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_7mm_5.0x2.5mm" H 4800 18225 50  0001 C CNN
-F 3 "~" H 4800 18225 50  0001 C CNN
-	1    4800 18225
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H5
-U 1 1 5D886A2F
-P 4800 18475
-F 0 "H5" H 4900 18521 50  0000 L CNN
-F 1 "Oval Mounting Hole" H 4900 18430 50  0000 L CNN
-F 2 "acheron_MountingHoles:MoutingHole_Oval_BackOnly_7mm_5.0x2.5mm" H 4800 18475 50  0001 C CNN
-F 3 "~" H 4800 18475 50  0001 C CNN
-	1    4800 18475
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H6
-U 1 1 5D9357B9
-P 4800 18725
-F 0 "H6" H 4900 18771 50  0000 L CNN
-F 1 "Half Side Hole " H 4900 18680 50  0000 L CNN
-F 2 "acheron_MountingHoles:halfSideHole" H 4800 18725 50  0001 C CNN
-F 3 "~" H 4800 18725 50  0001 C CNN
-	1    4800 18725
-	1    0    0    -1  
-$EndComp
-$Comp
-L Power_Protection:USBLC6-2SC6 U2
-U 1 1 5DE4F198
-P 9100 13400
-F 0 "U2" H 8625 13875 50  0000 C CNN
-F 1 "USBLC6-2SC6" H 8625 13800 50  0000 C CNN
-F 2 "acheron_Components:SOT-23-6" H 8350 13800 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 9300 13750 50  0001 C CNN
-	1    9100 13400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9475 16275 9550 16275
-$Comp
-L power:GND #PWR0111
-U 1 1 5DAA6D94
-P 9775 16075
-F 0 "#PWR0111" H 9775 15825 50  0001 C CNN
-F 1 "GND" H 9775 15950 31  0000 C CNN
-F 2 "" H 9775 16075 50  0001 C CNN
-F 3 "" H 9775 16075 50  0001 C CNN
-	1    9775 16075
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	9475 16075 9550 16075
-Wire Wire Line
-	9750 16075 9775 16075
-$Comp
-L Device:R_Small RCC2
-U 1 1 5DAC612F
-P 9650 16275
-F 0 "RCC2" V 9575 16275 31  0000 C CNN
-F 1 "5.1k" V 9650 16275 31  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 9650 16275 50  0001 C CNN
-F 3 "~" H 9650 16275 50  0001 C CNN
-	1    9650 16275
-	0    1    1    0   
-$EndComp
-Text GLabel 22150 19100 2    50   Output ~ 0
-Col1
-Wire Wire Line
-	22150 19100 22100 19100
-Text GLabel 18600 18800 0    50   Output ~ 0
-Col2
-Wire Wire Line
-	18600 18800 18650 18800
-Text GLabel 18600 18550 0    50   Output ~ 0
-Col3
-Wire Wire Line
-	18600 18550 18650 18550
-Text GLabel 18600 17550 0    50   Output ~ 0
-Col4
-Wire Wire Line
-	18600 17550 18650 17550
-Text GLabel 18600 17300 0    50   Output ~ 0
-Col5
-Wire Wire Line
-	18600 17300 18650 17300
-Text GLabel 18600 17050 0    50   Output ~ 0
-Col6
-Wire Wire Line
-	18600 17050 18650 17050
-Text GLabel 18600 16800 0    50   Output ~ 0
-Col7
-Wire Wire Line
-	18600 16800 18650 16800
-Text GLabel 18600 16550 0    50   Output ~ 0
-Col8
-Wire Wire Line
-	18600 16550 18650 16550
-Text GLabel 19500 15900 1    50   Output ~ 0
-Col9
-Wire Wire Line
-	19500 15900 19500 15950
-Text GLabel 19750 15900 1    50   Output ~ 0
-Col10
-Wire Wire Line
-	19750 15900 19750 15950
-Text GLabel 20250 15900 1    50   Output ~ 0
-Col11
-Wire Wire Line
-	20250 15900 20250 15950
-Text GLabel 20500 15900 1    50   Output ~ 0
-Col12
-Wire Wire Line
-	20500 15900 20500 15950
-Text GLabel 20750 15900 1    50   Output ~ 0
-Col13
-Wire Wire Line
-	20750 15900 20750 15950
-Text GLabel 21000 15900 1    50   Output ~ 0
-Row1
-Wire Wire Line
-	21000 15900 21000 15950
-Wire Wire Line
-	19250 19450 19250 19400
-Text GLabel 18600 19050 0    50   Output ~ 0
-Row3
-Wire Wire Line
-	18600 19050 18650 19050
-Text GLabel 21250 15900 1    50   Output ~ 0
-Row2
-Wire Wire Line
-	21250 15900 21250 15950
-Wire Wire Line
-	19500 19450 19500 19400
-$Comp
-L power:GND #PWR0114
-U 1 1 5DDA2A9F
-P 13350 13950
-F 0 "#PWR0114" H 13350 13700 50  0001 C CNN
-F 1 "GND" V 13355 13822 50  0000 R CNN
-F 2 "" H 13350 13950 50  0001 C CNN
-F 3 "" H 13350 13950 50  0001 C CNN
-	1    13350 13950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13350 13875 13350 13950
-NoConn ~ 13850 13475
-NoConn ~ 13850 13375
-Wire Notes Line width 20
-	12550 14500 14450 14500
-$Comp
-L Connector:Conn_ARM_JTAG_SWD_10 J2
-U 1 1 5DD65212
-P 13350 13275
-F 0 "J2" V 12750 13350 50  0000 R CNN
-F 1 "Conn_ARM_JTAG_SWD_10" V 12850 13750 50  0000 R CNN
-F 2 "acheron_Connectors:Conn_ARM_JTAG_SWD_10" H 13350 13275 50  0001 C CNN
-F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 13000 12025 50  0001 C CNN
-	1    13350 13275
-	1    0    0    -1  
-$EndComp
-Wire Notes Line width 20
-	14450 11850 14450 14500
-Wire Notes Line width 20
-	12550 11850 12550 14500
-Wire Wire Line
-	21500 15875 21500 15950
-Wire Wire Line
-	22175 17600 22100 17600
-Wire Wire Line
-	22175 17850 22100 17850
-Wire Wire Line
-	22175 18100 22100 18100
-Wire Wire Line
-	22175 18350 22100 18350
-Wire Wire Line
-	22175 18600 22100 18600
-Wire Wire Line
-	22175 18850 22100 18850
-Wire Wire Line
-	21250 19475 21250 19400
-Wire Wire Line
-	21000 19475 21000 19400
-Wire Wire Line
-	20750 19475 20750 19400
-Wire Wire Line
-	20500 19475 20500 19400
-Wire Wire Line
-	20250 19475 20250 19400
-Wire Wire Line
-	20000 19475 20000 19400
-Wire Wire Line
-	19750 19475 19750 19400
-Wire Notes Line width 20
-	4150 19975 6150 19975
-Wire Notes Line width 20
-	6150 19975 6150 16675
-Wire Notes Line width 20
-	6150 16675 4150 16675
-Wire Notes Line width 20
-	4150 16675 4150 19975
-Wire Notes Line width 20
-	4150 17025 6150 17025
-Text Notes 4525 16925 0    100  ~ 20
-Mounting holes
-Text GLabel 19000 19400 3    50   Input ~ 0
-Col14
-Wire Notes Line
-	8850 6000 8850 6700
 Wire Notes Line
 	8150 6000 8850 6000
-Wire Notes Line
-	8150 6000 8150 6700
-Wire Notes Line
-	8850 6700 8150 6700
 Wire Notes Line
 	20850 7000 20850 7700
 Wire Notes Line
@@ -1170,7 +39,7 @@ U 1 1 5F0A6E60
 P 8500 7350
 F 0 "SW55" H 8500 7400 50  0000 C CNN
 F 1 "LGUI_125" H 8500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 8500 7350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 8500 7350 50  0001 C CNN
 F 3 "" H 8500 7350 50  0001 C CNN
 	1    8500 7350
 	1    0    0    -1  
@@ -1183,488 +52,102 @@ Wire Notes Line
 	19850 5000 19850 5700
 Wire Notes Line
 	19150 5000 19850 5000
-Text GLabel 6500 6800 0    50   Input ~ 0
-Row5
-Text GLabel 6500 5800 0    50   Input ~ 0
-Row4
-Text GLabel 6500 4800 0    50   Input ~ 0
-Row3
-Text GLabel 6500 3800 0    50   Input ~ 0
-Row2
-Text GLabel 6500 2800 0    50   Input ~ 0
-Row1
-Wire Wire Line
-	19500 6800 18500 6800
-Connection ~ 19500 6800
-Wire Wire Line
-	18500 6800 17500 6800
-Connection ~ 18500 6800
-Connection ~ 17500 6800
-Wire Wire Line
-	9500 6800 8500 6800
-Connection ~ 9500 6800
-Wire Wire Line
-	8500 6800 7500 6800
-Connection ~ 8500 6800
-Wire Wire Line
-	7500 6800 6500 6800
-Connection ~ 7500 6800
-Wire Wire Line
-	20500 6800 19500 6800
-Wire Wire Line
-	18500 5800 17500 5800
-Connection ~ 18500 5800
-Wire Wire Line
-	17500 5800 16500 5800
-Connection ~ 17500 5800
-Wire Wire Line
-	16500 5800 15500 5800
-Connection ~ 16500 5800
-Wire Wire Line
-	15500 5800 14500 5800
-Connection ~ 15500 5800
-Wire Wire Line
-	14500 5800 13500 5800
-Connection ~ 14500 5800
-Wire Wire Line
-	13500 5800 12500 5800
-Connection ~ 13500 5800
-Wire Wire Line
-	12500 5800 11500 5800
-Connection ~ 12500 5800
-Wire Wire Line
-	11500 5800 10500 5800
-Connection ~ 11500 5800
-Wire Wire Line
-	10500 5800 9500 5800
-Connection ~ 10500 5800
-Wire Wire Line
-	9500 5800 8500 5800
-Connection ~ 9500 5800
-Wire Wire Line
-	8500 5800 7500 5800
-Connection ~ 8500 5800
-Wire Wire Line
-	7500 5800 6500 5800
-Connection ~ 7500 5800
-Wire Wire Line
-	19500 5800 18500 5800
-Wire Wire Line
-	19500 4800 18500 4800
-Connection ~ 19500 4800
-Wire Wire Line
-	18500 4800 17500 4800
-Connection ~ 18500 4800
-Wire Wire Line
-	17500 4800 16500 4800
-Connection ~ 17500 4800
-Wire Wire Line
-	16500 4800 15500 4800
-Connection ~ 16500 4800
-Wire Wire Line
-	15500 4800 14500 4800
-Connection ~ 15500 4800
-Wire Wire Line
-	14500 4800 13500 4800
-Connection ~ 14500 4800
-Wire Wire Line
-	13500 4800 12500 4800
-Connection ~ 13500 4800
-Wire Wire Line
-	12500 4800 11500 4800
-Connection ~ 12500 4800
-Wire Wire Line
-	11500 4800 10500 4800
-Connection ~ 11500 4800
-Wire Wire Line
-	10500 4800 9500 4800
-Connection ~ 10500 4800
-Wire Wire Line
-	9500 4800 8500 4800
-Connection ~ 9500 4800
-Wire Wire Line
-	8500 4800 7500 4800
-Connection ~ 8500 4800
-Wire Wire Line
-	7500 4800 6500 4800
-Connection ~ 7500 4800
-Wire Wire Line
-	20500 4800 19500 4800
-Wire Wire Line
-	18000 3350 18000 4350
-Connection ~ 18000 3350
 Wire Wire Line
 	18150 3350 18000 3350
 Wire Wire Line
-	19000 3350 19000 4350
-Connection ~ 19000 3350
-Wire Wire Line
 	19150 3350 19000 3350
-Wire Wire Line
-	20000 3350 20000 5350
-Connection ~ 20000 3350
 Wire Wire Line
 	20150 3350 20000 3350
 Wire Wire Line
-	20000 5350 20000 7350
-Connection ~ 20000 5350
-Wire Wire Line
 	20150 5350 20000 5350
-Wire Wire Line
-	19000 6350 19000 7350
-Connection ~ 19000 6350
 Wire Wire Line
 	19000 6350 19150 6350
 Wire Wire Line
-	19000 5350 19000 6350
-Connection ~ 19000 5350
-Wire Wire Line
 	19150 5350 19000 5350
-Wire Wire Line
-	19000 4350 19000 5350
-Connection ~ 19000 4350
 Wire Wire Line
 	19000 4350 19150 4350
 Wire Wire Line
-	18000 4350 18000 5350
-Connection ~ 18000 4350
-Wire Wire Line
 	18150 4350 18000 4350
-Wire Wire Line
-	18000 5350 18000 6350
-Connection ~ 18000 5350
 Wire Wire Line
 	18000 5350 18150 5350
 Wire Wire Line
-	18000 6350 18000 7350
-Connection ~ 18000 6350
-Wire Wire Line
 	18150 6350 18000 6350
-Wire Wire Line
-	17000 6350 17000 7350
-Connection ~ 17000 6350
 Wire Wire Line
 	17000 6350 17150 6350
 Wire Wire Line
-	17000 5350 17000 6350
-Connection ~ 17000 5350
-Wire Wire Line
 	17000 5350 17150 5350
-Wire Wire Line
-	17000 4350 17000 5350
-Connection ~ 17000 4350
 Wire Wire Line
 	17000 4350 17150 4350
 Wire Wire Line
-	17000 3350 17000 4350
-Connection ~ 17000 3350
-Wire Wire Line
 	17150 3350 17000 3350
-Wire Wire Line
-	16000 3350 16000 4350
-Connection ~ 16000 3350
 Wire Wire Line
 	16000 3350 16150 3350
 Wire Wire Line
-	16000 4350 16000 5350
-Connection ~ 16000 4350
-Wire Wire Line
 	16150 4350 16000 4350
-Wire Wire Line
-	16000 5350 16000 6350
-Connection ~ 16000 5350
 Wire Wire Line
 	16000 5350 16150 5350
 Wire Wire Line
-	15000 5350 15000 6350
-Connection ~ 15000 5350
-Wire Wire Line
 	15150 5350 15000 5350
-Wire Wire Line
-	15000 4350 15000 5350
-Connection ~ 15000 4350
 Wire Wire Line
 	15000 4350 15150 4350
 Wire Wire Line
-	15000 3350 15000 4350
-Connection ~ 15000 3350
-Wire Wire Line
 	15150 3350 15000 3350
-Wire Wire Line
-	14000 3350 14000 4350
-Connection ~ 14000 3350
 Wire Wire Line
 	14000 3350 14150 3350
 Wire Wire Line
-	14000 4350 14000 5350
-Connection ~ 14000 4350
-Wire Wire Line
 	14150 4350 14000 4350
-Wire Wire Line
-	14000 5350 14000 6350
-Connection ~ 14000 5350
 Wire Wire Line
 	14000 5350 14150 5350
 Wire Wire Line
-	13000 6350 13000 7350
-Connection ~ 13000 6350
-Wire Wire Line
 	13150 6350 13000 6350
-Wire Wire Line
-	13000 5350 13000 6350
-Connection ~ 13000 5350
 Wire Wire Line
 	13000 5350 13150 5350
 Wire Wire Line
-	13000 4350 13000 5350
-Connection ~ 13000 4350
-Wire Wire Line
 	13150 4350 13000 4350
-Wire Wire Line
-	13000 3350 13000 4350
-Connection ~ 13000 3350
 Wire Wire Line
 	13000 3350 13150 3350
 Wire Wire Line
-	12000 3350 12000 4350
-Connection ~ 12000 3350
-Wire Wire Line
 	12150 3350 12000 3350
-Wire Wire Line
-	12000 4350 12000 5350
-Connection ~ 12000 4350
 Wire Wire Line
 	12000 4350 12150 4350
 Wire Wire Line
-	12000 5350 12000 6350
-Connection ~ 12000 5350
-Wire Wire Line
 	12150 5350 12000 5350
-Wire Wire Line
-	10000 5350 10000 6350
-Connection ~ 10000 5350
 Wire Wire Line
 	10150 5350 10000 5350
 Wire Wire Line
-	10000 4350 10000 5350
-Connection ~ 10000 4350
-Wire Wire Line
 	10000 4350 10150 4350
-Wire Wire Line
-	10000 3350 10000 4350
-Connection ~ 10000 3350
 Wire Wire Line
 	10150 3350 10000 3350
 Wire Wire Line
-	18500 3800 17500 3800
-Connection ~ 18500 3800
-Wire Wire Line
-	17500 3800 16500 3800
-Connection ~ 17500 3800
-Wire Wire Line
-	16500 3800 15500 3800
-Connection ~ 16500 3800
-Wire Wire Line
-	15500 3800 14500 3800
-Connection ~ 15500 3800
-Wire Wire Line
-	14500 3800 13500 3800
-Connection ~ 14500 3800
-Wire Wire Line
-	13500 3800 12500 3800
-Connection ~ 13500 3800
-Wire Wire Line
-	12500 3800 11500 3800
-Connection ~ 12500 3800
-Wire Wire Line
-	11500 3800 10500 3800
-Connection ~ 11500 3800
-Wire Wire Line
-	10500 3800 9500 3800
-Connection ~ 10500 3800
-Wire Wire Line
-	9500 3800 8500 3800
-Connection ~ 9500 3800
-Wire Wire Line
-	8500 3800 7500 3800
-Connection ~ 8500 3800
-Wire Wire Line
-	7500 3800 6500 3800
-Connection ~ 7500 3800
-Wire Wire Line
-	19500 3800 18500 3800
-Wire Wire Line
-	19500 2800 18500 2800
-Connection ~ 19500 2800
-Wire Wire Line
-	18500 2800 17500 2800
-Connection ~ 18500 2800
-Wire Wire Line
-	17500 2800 16500 2800
-Connection ~ 17500 2800
-Wire Wire Line
-	16500 2800 15500 2800
-Connection ~ 16500 2800
-Wire Wire Line
-	15500 2800 14500 2800
-Connection ~ 15500 2800
-Wire Wire Line
-	14500 2800 13500 2800
-Connection ~ 14500 2800
-Wire Wire Line
-	13500 2800 12500 2800
-Connection ~ 13500 2800
-Wire Wire Line
-	12500 2800 11500 2800
-Connection ~ 12500 2800
-Wire Wire Line
-	11500 2800 10500 2800
-Connection ~ 11500 2800
-Wire Wire Line
-	10500 2800 9500 2800
-Connection ~ 10500 2800
-Wire Wire Line
-	9500 2800 8500 2800
-Connection ~ 9500 2800
-Wire Wire Line
-	8500 2800 7500 2800
-Connection ~ 8500 2800
-Wire Wire Line
-	7500 2800 6500 2800
-Connection ~ 7500 2800
-Wire Wire Line
-	20500 2800 19500 2800
-Text GLabel 20000 2350 1    50   Input ~ 0
-Col14
-Text GLabel 19000 2350 1    50   Input ~ 0
-Col13
-Text GLabel 18000 2350 1    50   Input ~ 0
-Col12
-Text GLabel 17000 2350 1    50   Input ~ 0
-Col11
-Text GLabel 16000 2350 1    50   Input ~ 0
-Col10
-Text GLabel 15000 2350 1    50   Input ~ 0
-Col9
-Text GLabel 14000 2350 1    50   Input ~ 0
-Col8
-Text GLabel 13000 2350 1    50   Input ~ 0
-Col7
-Text GLabel 12000 2350 1    50   Input ~ 0
-Col6
-Text GLabel 11000 2350 1    50   Input ~ 0
-Col5
-Text GLabel 10000 2350 1    50   Input ~ 0
-Col4
-Text GLabel 9000 2350 1    50   Input ~ 0
-Col3
-Text GLabel 8000 2350 1    50   Input ~ 0
-Col2
-Text GLabel 7000 2350 1    50   Input ~ 0
-Col1
-Wire Wire Line
-	11000 5350 11000 6350
-Connection ~ 11000 5350
-Wire Wire Line
 	11150 5350 11000 5350
-Wire Wire Line
-	11000 4350 11000 5350
-Connection ~ 11000 4350
 Wire Wire Line
 	11150 4350 11000 4350
 Wire Wire Line
-	11000 3350 11000 4350
-Connection ~ 11000 3350
-Wire Wire Line
 	11150 3350 11000 3350
-Wire Wire Line
-	9000 6350 9000 7350
-Connection ~ 9000 6350
 Wire Wire Line
 	9150 6350 9000 6350
 Wire Wire Line
-	9000 5350 9000 6350
-Connection ~ 9000 5350
-Wire Wire Line
 	9150 5350 9000 5350
-Wire Wire Line
-	9000 4350 9000 5350
-Connection ~ 9000 4350
 Wire Wire Line
 	9150 4350 9000 4350
 Wire Wire Line
-	9000 3350 9000 4350
-Connection ~ 9000 3350
-Wire Wire Line
 	9150 3350 9000 3350
-Wire Wire Line
-	8000 6350 8000 7350
-Connection ~ 8000 6350
 Wire Wire Line
 	8150 6350 8000 6350
 Wire Wire Line
-	8000 5350 8000 6350
-Connection ~ 8000 5350
-Wire Wire Line
 	8150 5350 8000 5350
-Wire Wire Line
-	8000 4350 8000 5350
-Connection ~ 8000 4350
 Wire Wire Line
 	8000 4350 8150 4350
 Wire Wire Line
-	8000 3350 8000 4350
-Connection ~ 8000 3350
-Wire Wire Line
 	8150 3350 8000 3350
-Wire Wire Line
-	7000 6350 7000 7350
-Connection ~ 7000 6350
 Wire Wire Line
 	7000 6350 7150 6350
 Wire Wire Line
-	7000 5350 7000 6350
-Connection ~ 7000 5350
-Wire Wire Line
 	7150 5350 7000 5350
-Wire Wire Line
-	7000 4350 7000 5350
-Connection ~ 7000 4350
 Wire Wire Line
 	7000 4350 7150 4350
 Wire Wire Line
-	7000 3350 7000 4350
-Connection ~ 7000 3350
-Wire Wire Line
 	7150 3350 7000 3350
-Wire Wire Line
-	17000 2350 17000 3350
-Wire Wire Line
-	20000 2350 20000 3350
-Wire Wire Line
-	19000 2350 19000 3350
-Wire Wire Line
-	18000 2350 18000 3350
-Wire Wire Line
-	16000 2350 16000 3350
-Wire Wire Line
-	15000 2350 15000 3350
-Wire Wire Line
-	14000 2350 14000 3350
-Wire Wire Line
-	13000 2350 13000 3350
-Wire Wire Line
-	12000 2350 12000 3350
-Wire Wire Line
-	11000 2350 11000 3350
-Wire Wire Line
-	10000 2350 10000 3350
-Wire Wire Line
-	9000 2350 9000 3350
-Wire Wire Line
-	8000 2350 8000 3350
-Wire Wire Line
-	7000 2350 7000 3350
 Wire Wire Line
 	20150 7350 20000 7350
 Wire Wire Line
@@ -1694,23 +177,12 @@ Wire Wire Line
 Wire Wire Line
 	8150 7350 8000 7350
 $Comp
-L Device:D_Small D62
-U 1 1 5F1183D5
-P 8500 5900
-F 0 "D62" V 8454 5970 50  0000 L CNN
-F 1 "1N4148" V 8545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 8500 5900 50  0001 C CNN
-F 3 "~" V 8500 5900 50  0001 C CNN
-	1    8500 5900
-	0    1    1    0   
-$EndComp
-$Comp
 L acheronSymbols:MXSwitch SW61
 U 1 1 5F1183CF
 P 20500 7350
 F 0 "SW61" H 20500 7400 50  0000 C CNN
 F 1 "RCTRL_125" H 20500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 20500 7350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 20500 7350 50  0001 C CNN
 F 3 "" H 20500 7350 50  0001 C CNN
 	1    20500 7350
 	1    0    0    -1  
@@ -1721,21 +193,10 @@ U 1 1 5F0A6EEA
 P 13500 7350
 F 0 "SW57" H 13500 7400 50  0000 C CNN
 F 1 "SPACE_625" H 13500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX625HR" H 13500 7350 50  0001 C CNN
+F 2 "muente_plate:MX625" H 13500 7350 50  0001 C CNN
 F 3 "" H 13500 7350 50  0001 C CNN
 	1    13500 7350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D61
-U 1 1 5F0A6EE4
-P 20500 6900
-F 0 "D61" V 20454 6970 50  0000 L CNN
-F 1 "1N4148" V 20545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 20500 6900 50  0001 C CNN
-F 3 "~" V 20500 6900 50  0001 C CNN
-	1    20500 6900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW60
@@ -1743,21 +204,10 @@ U 1 1 5F0A6EDE
 P 19500 7350
 F 0 "SW60" H 19500 7400 50  0000 C CNN
 F 1 "FN_125" H 19500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 19500 7350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 19500 7350 50  0001 C CNN
 F 3 "" H 19500 7350 50  0001 C CNN
 	1    19500 7350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D60
-U 1 1 5F0A6ED8
-P 19500 6900
-F 0 "D60" V 19454 6970 50  0000 L CNN
-F 1 "1N4148" V 19545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 19500 6900 50  0001 C CNN
-F 3 "~" V 19500 6900 50  0001 C CNN
-	1    19500 6900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW59
@@ -1765,21 +215,10 @@ U 1 1 5F0A6ED2
 P 18500 7350
 F 0 "SW59" H 18500 7400 50  0000 C CNN
 F 1 "RGUI_125" H 18500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 18500 7350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 18500 7350 50  0001 C CNN
 F 3 "" H 18500 7350 50  0001 C CNN
 	1    18500 7350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D59
-U 1 1 5F0A6ECC
-P 18500 6900
-F 0 "D59" V 18454 6970 50  0000 L CNN
-F 1 "1N4148" V 18545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 18500 6900 50  0001 C CNN
-F 3 "~" V 18500 6900 50  0001 C CNN
-	1    18500 6900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW58
@@ -1787,32 +226,10 @@ U 1 1 5F0A6EC6
 P 17500 7350
 F 0 "SW58" H 17500 7400 50  0000 C CNN
 F 1 "RALT_125" H 17500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 17500 7350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 17500 7350 50  0001 C CNN
 F 3 "" H 17500 7350 50  0001 C CNN
 	1    17500 7350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D58
-U 1 1 5F0A6EC0
-P 17500 6900
-F 0 "D58" V 17454 6970 50  0000 L CNN
-F 1 "1N4148" V 17545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 17500 6900 50  0001 C CNN
-F 3 "~" V 17500 6900 50  0001 C CNN
-	1    17500 6900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Small D57
-U 1 1 5F0A6E72
-P 13500 6900
-F 0 "D57" V 13454 6970 50  0000 L CNN
-F 1 "1N4148" V 13545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 13500 6900 50  0001 C CNN
-F 3 "~" V 13500 6900 50  0001 C CNN
-	1    13500 6900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW56
@@ -1820,32 +237,10 @@ U 1 1 5F0A6E6C
 P 9500 7350
 F 0 "SW56" H 9500 7400 50  0000 C CNN
 F 1 "LALT_125" H 9500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 9500 7350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 9500 7350 50  0001 C CNN
 F 3 "" H 9500 7350 50  0001 C CNN
 	1    9500 7350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D56
-U 1 1 5F0A6E66
-P 9500 6900
-F 0 "D56" V 9454 6970 50  0000 L CNN
-F 1 "1N4148" V 9545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 9500 6900 50  0001 C CNN
-F 3 "~" V 9500 6900 50  0001 C CNN
-	1    9500 6900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Small D55
-U 1 1 5F0A6E5A
-P 8500 6900
-F 0 "D55" V 8454 6970 50  0000 L CNN
-F 1 "1N4148" V 8545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 8500 6900 50  0001 C CNN
-F 3 "~" V 8500 6900 50  0001 C CNN
-	1    8500 6900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW54
@@ -1853,7 +248,7 @@ U 1 1 5F0A6E54
 P 7500 7350
 F 0 "SW54" H 7500 7400 50  0000 C CNN
 F 1 "LCTRL_125" H 7500 7300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 7500 7350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 7500 7350 50  0001 C CNN
 F 3 "" H 7500 7350 50  0001 C CNN
 	1    7500 7350
 	1    0    0    -1  
@@ -1864,21 +259,10 @@ U 1 1 5F048C1D
 P 16500 6350
 F 0 "SW50" H 16500 6400 50  0000 C CNN
 F 1 ",<" H 16500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 16500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 16500 6350 50  0001 C CNN
 F 3 "" H 16500 6350 50  0001 C CNN
 	1    16500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D54
-U 1 1 5F048C17
-P 7500 6900
-F 0 "D54" V 7454 6970 50  0000 L CNN
-F 1 "1N4148" V 7545 6970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 7500 6900 50  0001 C CNN
-F 3 "~" V 7500 6900 50  0001 C CNN
-	1    7500 6900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW53
@@ -1886,21 +270,10 @@ U 1 1 5F048C11
 P 19500 6350
 F 0 "SW53" H 19500 6400 50  0000 C CNN
 F 1 "RSHIFT_275" H 19500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX275H" H 19500 6350 50  0001 C CNN
+F 2 "muente_plate:MX200" H 19500 6350 50  0001 C CNN
 F 3 "" H 19500 6350 50  0001 C CNN
 	1    19500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D53
-U 1 1 5F048C0B
-P 19500 5900
-F 0 "D53" V 19454 5970 50  0000 L CNN
-F 1 "1N4148" V 19545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 19500 5900 50  0001 C CNN
-F 3 "~" V 19500 5900 50  0001 C CNN
-	1    19500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW52
@@ -1908,21 +281,10 @@ U 1 1 5F048C05
 P 18500 6350
 F 0 "SW52" H 18500 6400 50  0000 C CNN
 F 1 "/?" H 18500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 18500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 18500 6350 50  0001 C CNN
 F 3 "" H 18500 6350 50  0001 C CNN
 	1    18500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D52
-U 1 1 5F048BFF
-P 18500 5900
-F 0 "D52" V 18454 5970 50  0000 L CNN
-F 1 "1N4148" V 18545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 18500 5900 50  0001 C CNN
-F 3 "~" V 18500 5900 50  0001 C CNN
-	1    18500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW51
@@ -1930,32 +292,10 @@ U 1 1 5F048BF9
 P 17500 6350
 F 0 "SW51" H 17500 6400 50  0000 C CNN
 F 1 ".>" H 17500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 17500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 17500 6350 50  0001 C CNN
 F 3 "" H 17500 6350 50  0001 C CNN
 	1    17500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D51
-U 1 1 5F048BF3
-P 17500 5900
-F 0 "D51" V 17454 5970 50  0000 L CNN
-F 1 "1N4148" V 17545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 17500 5900 50  0001 C CNN
-F 3 "~" V 17500 5900 50  0001 C CNN
-	1    17500 5900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Small D50
-U 1 1 5F048BED
-P 16500 5900
-F 0 "D50" V 16454 5970 50  0000 L CNN
-F 1 "1N4148" V 16545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 16500 5900 50  0001 C CNN
-F 3 "~" V 16500 5900 50  0001 C CNN
-	1    16500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW49
@@ -1963,21 +303,10 @@ U 1 1 5F048BE7
 P 15500 6350
 F 0 "SW49" H 15500 6400 50  0000 C CNN
 F 1 "M" H 15500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 15500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 15500 6350 50  0001 C CNN
 F 3 "" H 15500 6350 50  0001 C CNN
 	1    15500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D49
-U 1 1 5F048BE1
-P 15500 5900
-F 0 "D49" V 15454 5970 50  0000 L CNN
-F 1 "1N4148" V 15545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 15500 5900 50  0001 C CNN
-F 3 "~" V 15500 5900 50  0001 C CNN
-	1    15500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW48
@@ -1985,21 +314,10 @@ U 1 1 5F048BDB
 P 14500 6350
 F 0 "SW48" H 14500 6400 50  0000 C CNN
 F 1 "N" H 14500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 14500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 14500 6350 50  0001 C CNN
 F 3 "" H 14500 6350 50  0001 C CNN
 	1    14500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D48
-U 1 1 5F048BD5
-P 14500 5900
-F 0 "D48" V 14454 5970 50  0000 L CNN
-F 1 "1N4148" V 14545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 14500 5900 50  0001 C CNN
-F 3 "~" V 14500 5900 50  0001 C CNN
-	1    14500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW47
@@ -2007,21 +325,10 @@ U 1 1 5F048BCF
 P 13500 6350
 F 0 "SW47" H 13500 6400 50  0000 C CNN
 F 1 "B" H 13500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 13500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 13500 6350 50  0001 C CNN
 F 3 "" H 13500 6350 50  0001 C CNN
 	1    13500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D47
-U 1 1 5F048BC9
-P 13500 5900
-F 0 "D47" V 13454 5970 50  0000 L CNN
-F 1 "1N4148" V 13545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 13500 5900 50  0001 C CNN
-F 3 "~" V 13500 5900 50  0001 C CNN
-	1    13500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW46
@@ -2029,21 +336,10 @@ U 1 1 5F048BC3
 P 12500 6350
 F 0 "SW46" H 12500 6400 50  0000 C CNN
 F 1 "V" H 12500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 12500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 12500 6350 50  0001 C CNN
 F 3 "" H 12500 6350 50  0001 C CNN
 	1    12500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D46
-U 1 1 5F048BBD
-P 12500 5900
-F 0 "D46" V 12454 5970 50  0000 L CNN
-F 1 "1N4148" V 12545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 12500 5900 50  0001 C CNN
-F 3 "~" V 12500 5900 50  0001 C CNN
-	1    12500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW45
@@ -2051,21 +347,10 @@ U 1 1 5F048BB7
 P 11500 6350
 F 0 "SW45" H 11500 6400 50  0000 C CNN
 F 1 "C" H 11500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 11500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 11500 6350 50  0001 C CNN
 F 3 "" H 11500 6350 50  0001 C CNN
 	1    11500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D45
-U 1 1 5F048BB1
-P 11500 5900
-F 0 "D45" V 11454 5970 50  0000 L CNN
-F 1 "1N4148" V 11545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 11500 5900 50  0001 C CNN
-F 3 "~" V 11500 5900 50  0001 C CNN
-	1    11500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW44
@@ -2073,21 +358,10 @@ U 1 1 5F048BAB
 P 10500 6350
 F 0 "SW44" H 10500 6400 50  0000 C CNN
 F 1 "X" H 10500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 10500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 10500 6350 50  0001 C CNN
 F 3 "" H 10500 6350 50  0001 C CNN
 	1    10500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D44
-U 1 1 5F048BA5
-P 10500 5900
-F 0 "D44" V 10454 5970 50  0000 L CNN
-F 1 "1N4148" V 10545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 10500 5900 50  0001 C CNN
-F 3 "~" V 10500 5900 50  0001 C CNN
-	1    10500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW43
@@ -2095,21 +369,10 @@ U 1 1 5F048B9F
 P 9500 6350
 F 0 "SW43" H 9500 6400 50  0000 C CNN
 F 1 "Z" H 9500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 9500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 9500 6350 50  0001 C CNN
 F 3 "" H 9500 6350 50  0001 C CNN
 	1    9500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D43
-U 1 1 5F048B99
-P 9500 5900
-F 0 "D43" V 9454 5970 50  0000 L CNN
-F 1 "1N4148" V 9545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 9500 5900 50  0001 C CNN
-F 3 "~" V 9500 5900 50  0001 C CNN
-	1    9500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW62
@@ -2117,21 +380,10 @@ U 1 1 5F048B93
 P 8500 6350
 F 0 "SW62" H 8500 6400 50  0000 C CNN
 F 1 "KC_NUBS" H 8500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 8500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 8500 6350 50  0001 C CNN
 F 3 "" H 8500 6350 50  0001 C CNN
 	1    8500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D42
-U 1 1 5F048B8D
-P 7500 5900
-F 0 "D42" V 7454 5970 50  0000 L CNN
-F 1 "1N4148" V 7545 5970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 7500 5900 50  0001 C CNN
-F 3 "~" V 7500 5900 50  0001 C CNN
-	1    7500 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW42
@@ -2139,21 +391,10 @@ U 1 1 5F048B87
 P 7500 6350
 F 0 "SW42" H 7500 6400 50  0000 C CNN
 F 1 "LSHIFT_125" H 7500 6300 39  0000 C CNN
-F 2 "acheron_MX:MX125H" H 7500 6350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 7500 6350 50  0001 C CNN
 F 3 "" H 7500 6350 50  0001 C CNN
 	1    7500 6350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D41
-U 1 1 5F0153C0
-P 20500 4900
-F 0 "D41" V 20454 4970 50  0000 L CNN
-F 1 "1N4148" V 20545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 20500 4900 50  0001 C CNN
-F 3 "~" V 20500 4900 50  0001 C CNN
-	1    20500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW41
@@ -2161,7 +402,7 @@ U 1 1 5F0153BA
 P 20500 5350
 F 0 "SW41" H 20500 5400 50  0000 C CNN
 F 1 "ENTER_ISO" H 20500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX_ISOEnter_Vertical" H 20500 5350 50  0001 C CNN
+F 2 "muente_plate:MX200" H 20500 5350 50  0001 C CNN
 F 3 "" H 20500 5350 50  0001 C CNN
 	1    20500 5350
 	1    0    0    -1  
@@ -2172,21 +413,10 @@ U 1 1 5EFF099B
 P 16500 5350
 F 0 "SW38" H 16500 5400 50  0000 C CNN
 F 1 "L" H 16500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 16500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 16500 5350 50  0001 C CNN
 F 3 "" H 16500 5350 50  0001 C CNN
 	1    16500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D40
-U 1 1 5EFF0995
-P 18500 4900
-F 0 "D40" V 18454 4970 50  0000 L CNN
-F 1 "1N4148" V 18545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 18500 4900 50  0001 C CNN
-F 3 "~" V 18500 4900 50  0001 C CNN
-	1    18500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW28
@@ -2194,21 +424,10 @@ U 1 1 5EFF098F
 P 19500 5350
 F 0 "SW28" H 19500 5400 50  0000 C CNN
 F 1 "KC_NUHS" H 19500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 19500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 19500 5350 50  0001 C CNN
 F 3 "" H 19500 5350 50  0001 C CNN
 	1    19500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D39
-U 1 1 5EFF0989
-P 17500 4900
-F 0 "D39" V 17454 4970 50  0000 L CNN
-F 1 "1N4148" V 17545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 17500 4900 50  0001 C CNN
-F 3 "~" V 17500 4900 50  0001 C CNN
-	1    17500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW40
@@ -2216,21 +435,10 @@ U 1 1 5EFF0983
 P 18500 5350
 F 0 "SW40" H 18500 5400 50  0000 C CNN
 F 1 "'\"" H 18500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 18500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 18500 5350 50  0001 C CNN
 F 3 "" H 18500 5350 50  0001 C CNN
 	1    18500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D38
-U 1 1 5EFF097D
-P 16500 4900
-F 0 "D38" V 16454 4970 50  0000 L CNN
-F 1 "1N4148" V 16545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 16500 4900 50  0001 C CNN
-F 3 "~" V 16500 4900 50  0001 C CNN
-	1    16500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW39
@@ -2238,32 +446,10 @@ U 1 1 5EFF0977
 P 17500 5350
 F 0 "SW39" H 17500 5400 50  0000 C CNN
 F 1 ";:" H 17500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 17500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 17500 5350 50  0001 C CNN
 F 3 "" H 17500 5350 50  0001 C CNN
 	1    17500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D37
-U 1 1 5EFF0971
-P 15500 4900
-F 0 "D37" V 15454 4970 50  0000 L CNN
-F 1 "1N4148" V 15545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 15500 4900 50  0001 C CNN
-F 3 "~" V 15500 4900 50  0001 C CNN
-	1    15500 4900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Small D36
-U 1 1 5EFF096B
-P 14500 4900
-F 0 "D36" V 14454 4970 50  0000 L CNN
-F 1 "1N4148" V 14545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 14500 4900 50  0001 C CNN
-F 3 "~" V 14500 4900 50  0001 C CNN
-	1    14500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW37
@@ -2271,21 +457,10 @@ U 1 1 5EFF0965
 P 15500 5350
 F 0 "SW37" H 15500 5400 50  0000 C CNN
 F 1 "K" H 15500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 15500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 15500 5350 50  0001 C CNN
 F 3 "" H 15500 5350 50  0001 C CNN
 	1    15500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D35
-U 1 1 5EFF095F
-P 13500 4900
-F 0 "D35" V 13454 4970 50  0000 L CNN
-F 1 "1N4148" V 13545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 13500 4900 50  0001 C CNN
-F 3 "~" V 13500 4900 50  0001 C CNN
-	1    13500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW36
@@ -2293,21 +468,10 @@ U 1 1 5EFF0959
 P 14500 5350
 F 0 "SW36" H 14500 5400 50  0000 C CNN
 F 1 "J" H 14500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 14500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 14500 5350 50  0001 C CNN
 F 3 "" H 14500 5350 50  0001 C CNN
 	1    14500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D34
-U 1 1 5EFF0953
-P 12500 4900
-F 0 "D34" V 12454 4970 50  0000 L CNN
-F 1 "1N4148" V 12545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 12500 4900 50  0001 C CNN
-F 3 "~" V 12500 4900 50  0001 C CNN
-	1    12500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW35
@@ -2315,21 +479,10 @@ U 1 1 5EFF094D
 P 13500 5350
 F 0 "SW35" H 13500 5400 50  0000 C CNN
 F 1 "H" H 13500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 13500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 13500 5350 50  0001 C CNN
 F 3 "" H 13500 5350 50  0001 C CNN
 	1    13500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D33
-U 1 1 5EFF0947
-P 11500 4900
-F 0 "D33" V 11454 4970 50  0000 L CNN
-F 1 "1N4148" V 11545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 11500 4900 50  0001 C CNN
-F 3 "~" V 11500 4900 50  0001 C CNN
-	1    11500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW34
@@ -2337,21 +490,10 @@ U 1 1 5EFF0941
 P 12500 5350
 F 0 "SW34" H 12500 5400 50  0000 C CNN
 F 1 "G" H 12500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 12500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 12500 5350 50  0001 C CNN
 F 3 "" H 12500 5350 50  0001 C CNN
 	1    12500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D32
-U 1 1 5EFF093B
-P 10500 4900
-F 0 "D32" V 10454 4970 50  0000 L CNN
-F 1 "1N4148" V 10545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 10500 4900 50  0001 C CNN
-F 3 "~" V 10500 4900 50  0001 C CNN
-	1    10500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW33
@@ -2359,21 +501,10 @@ U 1 1 5EFF0935
 P 11500 5350
 F 0 "SW33" H 11500 5400 50  0000 C CNN
 F 1 "F" H 11500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 11500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 11500 5350 50  0001 C CNN
 F 3 "" H 11500 5350 50  0001 C CNN
 	1    11500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D31
-U 1 1 5EFF092F
-P 9500 4900
-F 0 "D31" V 9454 4970 50  0000 L CNN
-F 1 "1N4148" V 9545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 9500 4900 50  0001 C CNN
-F 3 "~" V 9500 4900 50  0001 C CNN
-	1    9500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW32
@@ -2381,21 +512,10 @@ U 1 1 5EFF0929
 P 10500 5350
 F 0 "SW32" H 10500 5400 50  0000 C CNN
 F 1 "D" H 10500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 10500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 10500 5350 50  0001 C CNN
 F 3 "" H 10500 5350 50  0001 C CNN
 	1    10500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D30
-U 1 1 5EFF0923
-P 8500 4900
-F 0 "D30" V 8454 4970 50  0000 L CNN
-F 1 "1N4148" V 8545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 8500 4900 50  0001 C CNN
-F 3 "~" V 8500 4900 50  0001 C CNN
-	1    8500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW31
@@ -2403,21 +523,10 @@ U 1 1 5EFF091D
 P 9500 5350
 F 0 "SW31" H 9500 5400 50  0000 C CNN
 F 1 "S" H 9500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 9500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 9500 5350 50  0001 C CNN
 F 3 "" H 9500 5350 50  0001 C CNN
 	1    9500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D29
-U 1 1 5EFF0917
-P 7500 4900
-F 0 "D29" V 7454 4970 50  0000 L CNN
-F 1 "1N4148" V 7545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 7500 4900 50  0001 C CNN
-F 3 "~" V 7500 4900 50  0001 C CNN
-	1    7500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW30
@@ -2425,21 +534,10 @@ U 1 1 5EFF0911
 P 8500 5350
 F 0 "SW30" H 8500 5400 50  0000 C CNN
 F 1 "A" H 8500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 8500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 8500 5350 50  0001 C CNN
 F 3 "" H 8500 5350 50  0001 C CNN
 	1    8500 5350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D28
-U 1 1 5EFF090B
-P 19500 4900
-F 0 "D28" V 19454 4970 50  0000 L CNN
-F 1 "1N4148" V 19545 4970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 19500 4900 50  0001 C CNN
-F 3 "~" V 19500 4900 50  0001 C CNN
-	1    19500 4900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW29
@@ -2447,7 +545,7 @@ U 1 1 5EFF0905
 P 7500 5350
 F 0 "SW29" H 7500 5400 50  0000 C CNN
 F 1 "CAPSLOCK_175" H 7500 5300 39  0000 C CNN
-F 2 "acheron_MX:MX175H" H 7500 5350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 7500 5350 50  0001 C CNN
 F 3 "" H 7500 5350 50  0001 C CNN
 	1    7500 5350
 	1    0    0    -1  
@@ -2458,21 +556,10 @@ U 1 1 5EF5902E
 P 16500 4350
 F 0 "SW24" H 16500 4400 50  0000 C CNN
 F 1 "O" H 16500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 16500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 16500 4350 50  0001 C CNN
 F 3 "" H 16500 4350 50  0001 C CNN
 	1    16500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D27
-U 1 1 5EF59058
-P 19500 3900
-F 0 "D27" V 19454 3970 50  0000 L CNN
-F 1 "1N4148" V 19545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 19500 3900 50  0001 C CNN
-F 3 "~" V 19500 3900 50  0001 C CNN
-	1    19500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW27
@@ -2480,21 +567,10 @@ U 1 1 5EF59052
 P 19500 4350
 F 0 "SW27" H 19500 4400 50  0000 C CNN
 F 1 "]}" H 19500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 19500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 19500 4350 50  0001 C CNN
 F 3 "" H 19500 4350 50  0001 C CNN
 	1    19500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D26
-U 1 1 5EF5904C
-P 18500 3900
-F 0 "D26" V 18454 3970 50  0000 L CNN
-F 1 "1N4148" V 18545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 18500 3900 50  0001 C CNN
-F 3 "~" V 18500 3900 50  0001 C CNN
-	1    18500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW26
@@ -2502,21 +578,10 @@ U 1 1 5EF59046
 P 18500 4350
 F 0 "SW26" H 18500 4400 50  0000 C CNN
 F 1 "[{" H 18500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 18500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 18500 4350 50  0001 C CNN
 F 3 "" H 18500 4350 50  0001 C CNN
 	1    18500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D25
-U 1 1 5EF59040
-P 17500 3900
-F 0 "D25" V 17454 3970 50  0000 L CNN
-F 1 "1N4148" V 17545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 17500 3900 50  0001 C CNN
-F 3 "~" V 17500 3900 50  0001 C CNN
-	1    17500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW25
@@ -2524,32 +589,10 @@ U 1 1 5EF5903A
 P 17500 4350
 F 0 "SW25" H 17500 4400 50  0000 C CNN
 F 1 "P" H 17500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 17500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 17500 4350 50  0001 C CNN
 F 3 "" H 17500 4350 50  0001 C CNN
 	1    17500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D24
-U 1 1 5EF59034
-P 16500 3900
-F 0 "D24" V 16454 3970 50  0000 L CNN
-F 1 "1N4148" V 16545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 16500 3900 50  0001 C CNN
-F 3 "~" V 16500 3900 50  0001 C CNN
-	1    16500 3900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Small D23
-U 1 1 5EF59028
-P 15500 3900
-F 0 "D23" V 15454 3970 50  0000 L CNN
-F 1 "1N4148" V 15545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 15500 3900 50  0001 C CNN
-F 3 "~" V 15500 3900 50  0001 C CNN
-	1    15500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW23
@@ -2557,21 +600,10 @@ U 1 1 5EF59022
 P 15500 4350
 F 0 "SW23" H 15500 4400 50  0000 C CNN
 F 1 "I" H 15500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 15500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 15500 4350 50  0001 C CNN
 F 3 "" H 15500 4350 50  0001 C CNN
 	1    15500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D22
-U 1 1 5EF5901C
-P 14500 3900
-F 0 "D22" V 14454 3970 50  0000 L CNN
-F 1 "1N4148" V 14545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 14500 3900 50  0001 C CNN
-F 3 "~" V 14500 3900 50  0001 C CNN
-	1    14500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW22
@@ -2579,21 +611,10 @@ U 1 1 5EF59016
 P 14500 4350
 F 0 "SW22" H 14500 4400 50  0000 C CNN
 F 1 "U" H 14500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 14500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 14500 4350 50  0001 C CNN
 F 3 "" H 14500 4350 50  0001 C CNN
 	1    14500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D21
-U 1 1 5EF59010
-P 13500 3900
-F 0 "D21" V 13454 3970 50  0000 L CNN
-F 1 "1N4148" V 13545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 13500 3900 50  0001 C CNN
-F 3 "~" V 13500 3900 50  0001 C CNN
-	1    13500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW21
@@ -2601,21 +622,10 @@ U 1 1 5EF5900A
 P 13500 4350
 F 0 "SW21" H 13500 4400 50  0000 C CNN
 F 1 "Y" H 13500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 13500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 13500 4350 50  0001 C CNN
 F 3 "" H 13500 4350 50  0001 C CNN
 	1    13500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D20
-U 1 1 5EF59004
-P 12500 3900
-F 0 "D20" V 12454 3970 50  0000 L CNN
-F 1 "1N4148" V 12545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 12500 3900 50  0001 C CNN
-F 3 "~" V 12500 3900 50  0001 C CNN
-	1    12500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW20
@@ -2623,21 +633,10 @@ U 1 1 5EF58FFE
 P 12500 4350
 F 0 "SW20" H 12500 4400 50  0000 C CNN
 F 1 "T" H 12500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 12500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 12500 4350 50  0001 C CNN
 F 3 "" H 12500 4350 50  0001 C CNN
 	1    12500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D19
-U 1 1 5EF58FF8
-P 11500 3900
-F 0 "D19" V 11454 3970 50  0000 L CNN
-F 1 "1N4148" V 11545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 11500 3900 50  0001 C CNN
-F 3 "~" V 11500 3900 50  0001 C CNN
-	1    11500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW19
@@ -2645,21 +644,10 @@ U 1 1 5EF58FF2
 P 11500 4350
 F 0 "SW19" H 11500 4400 50  0000 C CNN
 F 1 "R" H 11500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 11500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 11500 4350 50  0001 C CNN
 F 3 "" H 11500 4350 50  0001 C CNN
 	1    11500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D18
-U 1 1 5EF58FEC
-P 10500 3900
-F 0 "D18" V 10454 3970 50  0000 L CNN
-F 1 "1N4148" V 10545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 10500 3900 50  0001 C CNN
-F 3 "~" V 10500 3900 50  0001 C CNN
-	1    10500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW18
@@ -2667,21 +655,10 @@ U 1 1 5EF58FE6
 P 10500 4350
 F 0 "SW18" H 10500 4400 50  0000 C CNN
 F 1 "E" H 10500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 10500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 10500 4350 50  0001 C CNN
 F 3 "" H 10500 4350 50  0001 C CNN
 	1    10500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D17
-U 1 1 5EF58FE0
-P 9500 3900
-F 0 "D17" V 9454 3970 50  0000 L CNN
-F 1 "1N4148" V 9545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 9500 3900 50  0001 C CNN
-F 3 "~" V 9500 3900 50  0001 C CNN
-	1    9500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW17
@@ -2689,21 +666,10 @@ U 1 1 5EF58FDA
 P 9500 4350
 F 0 "SW17" H 9500 4400 50  0000 C CNN
 F 1 "W" H 9500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 9500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 9500 4350 50  0001 C CNN
 F 3 "" H 9500 4350 50  0001 C CNN
 	1    9500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D16
-U 1 1 5EF58FD4
-P 8500 3900
-F 0 "D16" V 8454 3970 50  0000 L CNN
-F 1 "1N4148" V 8545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 8500 3900 50  0001 C CNN
-F 3 "~" V 8500 3900 50  0001 C CNN
-	1    8500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW16
@@ -2711,21 +677,10 @@ U 1 1 5EF58FCE
 P 8500 4350
 F 0 "SW16" H 8500 4400 50  0000 C CNN
 F 1 "Q" H 8500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 8500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 8500 4350 50  0001 C CNN
 F 3 "" H 8500 4350 50  0001 C CNN
 	1    8500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D15
-U 1 1 5EF58FC8
-P 7500 3900
-F 0 "D15" V 7454 3970 50  0000 L CNN
-F 1 "1N4148" V 7545 3970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 7500 3900 50  0001 C CNN
-F 3 "~" V 7500 3900 50  0001 C CNN
-	1    7500 3900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW15
@@ -2733,21 +688,10 @@ U 1 1 5EF58FC2
 P 7500 4350
 F 0 "SW15" H 7500 4400 50  0000 C CNN
 F 1 "TAB_150" H 7500 4300 39  0000 C CNN
-F 2 "acheron_MX:MX150H" H 7500 4350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 7500 4350 50  0001 C CNN
 F 3 "" H 7500 4350 50  0001 C CNN
 	1    7500 4350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D14
-U 1 1 5EEDA662
-P 20500 2900
-F 0 "D14" V 20454 2970 50  0000 L CNN
-F 1 "1N4148" V 20545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 20500 2900 50  0001 C CNN
-F 3 "~" V 20500 2900 50  0001 C CNN
-	1    20500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW14
@@ -2755,21 +699,10 @@ U 1 1 5EEDA65C
 P 20500 3350
 F 0 "SW14" H 20500 3400 50  0000 C CNN
 F 1 "BCKSPC_200" H 20500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX200H" H 20500 3350 50  0001 C CNN
+F 2 "muente_plate:MX200" H 20500 3350 50  0001 C CNN
 F 3 "" H 20500 3350 50  0001 C CNN
 	1    20500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D13
-U 1 1 5EEDA656
-P 19500 2900
-F 0 "D13" V 19454 2970 50  0000 L CNN
-F 1 "1N4148" V 19545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 19500 2900 50  0001 C CNN
-F 3 "~" V 19500 2900 50  0001 C CNN
-	1    19500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW13
@@ -2777,21 +710,10 @@ U 1 1 5EEDA650
 P 19500 3350
 F 0 "SW13" H 19500 3400 50  0000 C CNN
 F 1 "=+" H 19500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 19500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 19500 3350 50  0001 C CNN
 F 3 "" H 19500 3350 50  0001 C CNN
 	1    19500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D12
-U 1 1 5EEDA64A
-P 18500 2900
-F 0 "D12" V 18454 2970 50  0000 L CNN
-F 1 "1N4148" V 18545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 18500 2900 50  0001 C CNN
-F 3 "~" V 18500 2900 50  0001 C CNN
-	1    18500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW12
@@ -2799,21 +721,10 @@ U 1 1 5EEDA644
 P 18500 3350
 F 0 "SW12" H 18500 3400 50  0000 C CNN
 F 1 "-_" H 18500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 18500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 18500 3350 50  0001 C CNN
 F 3 "" H 18500 3350 50  0001 C CNN
 	1    18500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D11
-U 1 1 5EEDA63E
-P 17500 2900
-F 0 "D11" V 17454 2970 50  0000 L CNN
-F 1 "1N4148" V 17545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 17500 2900 50  0001 C CNN
-F 3 "~" V 17500 2900 50  0001 C CNN
-	1    17500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW11
@@ -2821,21 +732,10 @@ U 1 1 5EEDA638
 P 17500 3350
 F 0 "SW11" H 17500 3400 50  0000 C CNN
 F 1 "0" H 17500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 17500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 17500 3350 50  0001 C CNN
 F 3 "" H 17500 3350 50  0001 C CNN
 	1    17500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D10
-U 1 1 5EEDA632
-P 16500 2900
-F 0 "D10" V 16454 2970 50  0000 L CNN
-F 1 "1N4148" V 16545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 16500 2900 50  0001 C CNN
-F 3 "~" V 16500 2900 50  0001 C CNN
-	1    16500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW10
@@ -2843,21 +743,10 @@ U 1 1 5EEDA62C
 P 16500 3350
 F 0 "SW10" H 16500 3400 50  0000 C CNN
 F 1 "9" H 16500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 16500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 16500 3350 50  0001 C CNN
 F 3 "" H 16500 3350 50  0001 C CNN
 	1    16500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D9
-U 1 1 5EEDA626
-P 15500 2900
-F 0 "D9" V 15454 2970 50  0000 L CNN
-F 1 "1N4148" V 15545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 15500 2900 50  0001 C CNN
-F 3 "~" V 15500 2900 50  0001 C CNN
-	1    15500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW9
@@ -2865,21 +754,10 @@ U 1 1 5EEDA620
 P 15500 3350
 F 0 "SW9" H 15500 3400 50  0000 C CNN
 F 1 "8" H 15500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 15500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 15500 3350 50  0001 C CNN
 F 3 "" H 15500 3350 50  0001 C CNN
 	1    15500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D8
-U 1 1 5EEDA61A
-P 14500 2900
-F 0 "D8" V 14454 2970 50  0000 L CNN
-F 1 "1N4148" V 14545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 14500 2900 50  0001 C CNN
-F 3 "~" V 14500 2900 50  0001 C CNN
-	1    14500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW8
@@ -2887,21 +765,10 @@ U 1 1 5EEDA614
 P 14500 3350
 F 0 "SW8" H 14500 3400 50  0000 C CNN
 F 1 "7" H 14500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 14500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 14500 3350 50  0001 C CNN
 F 3 "" H 14500 3350 50  0001 C CNN
 	1    14500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D7
-U 1 1 5EEB1900
-P 13500 2900
-F 0 "D7" V 13454 2970 50  0000 L CNN
-F 1 "1N4148" V 13545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 13500 2900 50  0001 C CNN
-F 3 "~" V 13500 2900 50  0001 C CNN
-	1    13500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW7
@@ -2909,21 +776,10 @@ U 1 1 5EEB18FA
 P 13500 3350
 F 0 "SW7" H 13500 3400 50  0000 C CNN
 F 1 "6" H 13500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 13500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 13500 3350 50  0001 C CNN
 F 3 "" H 13500 3350 50  0001 C CNN
 	1    13500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D6
-U 1 1 5EEB18F4
-P 12500 2900
-F 0 "D6" V 12454 2970 50  0000 L CNN
-F 1 "1N4148" V 12545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 12500 2900 50  0001 C CNN
-F 3 "~" V 12500 2900 50  0001 C CNN
-	1    12500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW6
@@ -2931,7 +787,7 @@ U 1 1 5EEB18EE
 P 12500 3350
 F 0 "SW6" H 12500 3400 50  0000 C CNN
 F 1 "5" H 12500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 12500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 12500 3350 50  0001 C CNN
 F 3 "" H 12500 3350 50  0001 C CNN
 	1    12500 3350
 	1    0    0    -1  
@@ -2942,21 +798,10 @@ U 1 1 5EEB18E2
 P 11500 3350
 F 0 "SW5" H 11500 3400 50  0000 C CNN
 F 1 "4" H 11500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 11500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 11500 3350 50  0001 C CNN
 F 3 "" H 11500 3350 50  0001 C CNN
 	1    11500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D4
-U 1 1 5EE8AAB2
-P 10500 2900
-F 0 "D4" V 10454 2970 50  0000 L CNN
-F 1 "1N4148" V 10545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 10500 2900 50  0001 C CNN
-F 3 "~" V 10500 2900 50  0001 C CNN
-	1    10500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW4
@@ -2964,21 +809,10 @@ U 1 1 5EE8AAAC
 P 10500 3350
 F 0 "SW4" H 10500 3400 50  0000 C CNN
 F 1 "3" H 10500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 10500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 10500 3350 50  0001 C CNN
 F 3 "" H 10500 3350 50  0001 C CNN
 	1    10500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D3
-U 1 1 5EE8AAA6
-P 9500 2900
-F 0 "D3" V 9454 2970 50  0000 L CNN
-F 1 "1N4148" V 9545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 9500 2900 50  0001 C CNN
-F 3 "~" V 9500 2900 50  0001 C CNN
-	1    9500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW3
@@ -2986,21 +820,10 @@ U 1 1 5EE8AAA0
 P 9500 3350
 F 0 "SW3" H 9500 3400 50  0000 C CNN
 F 1 "2" H 9500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 9500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 9500 3350 50  0001 C CNN
 F 3 "" H 9500 3350 50  0001 C CNN
 	1    9500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D2
-U 1 1 5EE663F4
-P 8500 2900
-F 0 "D2" V 8454 2970 50  0000 L CNN
-F 1 "1N4148" V 8545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 8500 2900 50  0001 C CNN
-F 3 "~" V 8500 2900 50  0001 C CNN
-	1    8500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW2
@@ -3008,21 +831,10 @@ U 1 1 5EE663EE
 P 8500 3350
 F 0 "SW2" H 8500 3400 50  0000 C CNN
 F 1 "1" H 8500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 8500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 8500 3350 50  0001 C CNN
 F 3 "" H 8500 3350 50  0001 C CNN
 	1    8500 3350
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D1
-U 1 1 5EE13061
-P 7500 2900
-F 0 "D1" V 7454 2970 50  0000 L CNN
-F 1 "1N4148" V 7545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 7500 2900 50  0001 C CNN
-F 3 "~" V 7500 2900 50  0001 C CNN
-	1    7500 2900
-	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW1
@@ -3030,37 +842,263 @@ U 1 1 5EDED48F
 P 7500 3350
 F 0 "SW1" H 7500 3400 50  0000 C CNN
 F 1 "ESC" H 7500 3300 39  0000 C CNN
-F 2 "acheron_MX:MX100H" H 7500 3350 50  0001 C CNN
+F 2 "muente_plate:MX100" H 7500 3350 50  0001 C CNN
 F 3 "" H 7500 3350 50  0001 C CNN
 	1    7500 3350
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	20350 2550 19650 2550
-Wire Notes Line
-	19650 1850 19650 2550
-Wire Notes Line
-	19650 1850 20350 1850
-Wire Notes Line
-	20350 1850 20350 2550
-$Comp
-L Device:D_Small D5
-U 1 1 5EEB18E8
-P 11500 2900
-F 0 "D5" V 11454 2970 50  0000 L CNN
-F 1 "1N4148" V 11545 2970 50  0000 L CNN
-F 2 "acheron_Components:D_SOD-123" V 11500 2900 50  0001 C CNN
-F 3 "~" V 11500 2900 50  0001 C CNN
-	1    11500 2900
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	9500 6800 13500 6800
-Connection ~ 13500 6800
+	7000 7350 7000 6350
 Wire Wire Line
-	13500 6800 17500 6800
-Text GLabel 19500 19450 3    50   Output ~ 0
-Row5
-Text GLabel 19250 19450 3    50   Output ~ 0
-Row4
+	7000 3000 7500 3000
+Connection ~ 7000 3350
+Wire Wire Line
+	7000 3350 7000 3000
+Connection ~ 7000 4350
+Wire Wire Line
+	7000 4350 7000 3350
+Connection ~ 7000 5350
+Wire Wire Line
+	7000 5350 7000 4350
+Connection ~ 7000 6350
+Wire Wire Line
+	7000 6350 7000 5350
+Connection ~ 7500 3000
+Wire Wire Line
+	7500 3000 8000 3000
+Connection ~ 8500 3000
+Wire Wire Line
+	8500 3000 9000 3000
+Connection ~ 9500 3000
+Wire Wire Line
+	9500 3000 10000 3000
+Connection ~ 10500 3000
+Wire Wire Line
+	10500 3000 11000 3000
+Connection ~ 11500 3000
+Wire Wire Line
+	11500 3000 12000 3000
+Connection ~ 12500 3000
+Wire Wire Line
+	12500 3000 13000 3000
+Connection ~ 13500 3000
+Wire Wire Line
+	13500 3000 14000 3000
+Connection ~ 14500 3000
+Wire Wire Line
+	14500 3000 15000 3000
+Connection ~ 15500 3000
+Wire Wire Line
+	15500 3000 16000 3000
+Connection ~ 16500 3000
+Wire Wire Line
+	16500 3000 17000 3000
+Connection ~ 17500 3000
+Wire Wire Line
+	17500 3000 18000 3000
+Connection ~ 18500 3000
+Wire Wire Line
+	18500 3000 19000 3000
+Connection ~ 19500 3000
+Wire Wire Line
+	19500 3000 20000 3000
+Wire Wire Line
+	8000 7350 8000 6350
+Connection ~ 8000 3000
+Wire Wire Line
+	8000 3000 8500 3000
+Connection ~ 8000 3350
+Wire Wire Line
+	8000 3350 8000 3000
+Connection ~ 8000 4350
+Wire Wire Line
+	8000 4350 8000 3350
+Connection ~ 8000 5350
+Wire Wire Line
+	8000 5350 8000 4350
+Connection ~ 8000 6350
+Wire Wire Line
+	8000 6350 8000 5350
+Wire Wire Line
+	9000 7350 9000 6350
+Connection ~ 9000 3000
+Wire Wire Line
+	9000 3000 9500 3000
+Connection ~ 9000 3350
+Wire Wire Line
+	9000 3350 9000 3000
+Connection ~ 9000 4350
+Wire Wire Line
+	9000 4350 9000 3350
+Connection ~ 9000 5350
+Wire Wire Line
+	9000 5350 9000 4350
+Connection ~ 9000 6350
+Wire Wire Line
+	9000 6350 9000 5350
+Wire Wire Line
+	10000 6350 10000 5350
+Connection ~ 10000 3000
+Wire Wire Line
+	10000 3000 10500 3000
+Connection ~ 10000 3350
+Wire Wire Line
+	10000 3350 10000 3000
+Connection ~ 10000 4350
+Wire Wire Line
+	10000 4350 10000 3350
+Connection ~ 10000 5350
+Wire Wire Line
+	10000 5350 10000 4350
+Wire Wire Line
+	11000 6350 11000 5350
+Connection ~ 11000 3000
+Wire Wire Line
+	11000 3000 11500 3000
+Connection ~ 11000 3350
+Wire Wire Line
+	11000 3350 11000 3000
+Connection ~ 11000 4350
+Wire Wire Line
+	11000 4350 11000 3350
+Connection ~ 11000 5350
+Wire Wire Line
+	11000 5350 11000 4350
+Wire Wire Line
+	12000 6350 12000 5350
+Connection ~ 12000 3000
+Wire Wire Line
+	12000 3000 12500 3000
+Connection ~ 12000 3350
+Wire Wire Line
+	12000 3350 12000 3000
+Connection ~ 12000 4350
+Wire Wire Line
+	12000 4350 12000 3350
+Connection ~ 12000 5350
+Wire Wire Line
+	12000 5350 12000 4350
+Wire Wire Line
+	13000 7350 13000 6350
+Connection ~ 13000 3000
+Wire Wire Line
+	13000 3000 13500 3000
+Connection ~ 13000 3350
+Wire Wire Line
+	13000 3350 13000 3000
+Connection ~ 13000 4350
+Wire Wire Line
+	13000 4350 13000 3350
+Connection ~ 13000 5350
+Wire Wire Line
+	13000 5350 13000 4350
+Connection ~ 13000 6350
+Wire Wire Line
+	13000 6350 13000 5350
+Wire Wire Line
+	14000 6350 14000 5350
+Connection ~ 14000 3000
+Wire Wire Line
+	14000 3000 14500 3000
+Connection ~ 14000 3350
+Wire Wire Line
+	14000 3350 14000 3000
+Connection ~ 14000 4350
+Wire Wire Line
+	14000 4350 14000 3350
+Connection ~ 14000 5350
+Wire Wire Line
+	14000 5350 14000 4350
+Wire Wire Line
+	15000 6350 15000 5350
+Connection ~ 15000 3000
+Wire Wire Line
+	15000 3000 15500 3000
+Connection ~ 15000 3350
+Wire Wire Line
+	15000 3350 15000 3000
+Connection ~ 15000 4350
+Wire Wire Line
+	15000 4350 15000 3350
+Connection ~ 15000 5350
+Wire Wire Line
+	15000 5350 15000 4350
+Wire Wire Line
+	16000 6350 16000 5350
+Connection ~ 16000 3000
+Wire Wire Line
+	16000 3000 16500 3000
+Connection ~ 16000 3350
+Wire Wire Line
+	16000 3350 16000 3000
+Connection ~ 16000 4350
+Wire Wire Line
+	16000 4350 16000 3350
+Connection ~ 16000 5350
+Wire Wire Line
+	16000 5350 16000 4350
+Wire Wire Line
+	17000 7350 17000 6350
+Connection ~ 17000 3000
+Wire Wire Line
+	17000 3000 17500 3000
+Connection ~ 17000 3350
+Wire Wire Line
+	17000 3350 17000 3000
+Connection ~ 17000 4350
+Wire Wire Line
+	17000 4350 17000 3350
+Connection ~ 17000 5350
+Wire Wire Line
+	17000 5350 17000 4350
+Connection ~ 17000 6350
+Wire Wire Line
+	17000 6350 17000 5350
+Wire Wire Line
+	18000 7350 18000 6350
+Connection ~ 18000 3000
+Wire Wire Line
+	18000 3000 18500 3000
+Connection ~ 18000 3350
+Wire Wire Line
+	18000 3350 18000 3000
+Connection ~ 18000 4350
+Wire Wire Line
+	18000 4350 18000 3350
+Connection ~ 18000 5350
+Wire Wire Line
+	18000 5350 18000 4350
+Connection ~ 18000 6350
+Wire Wire Line
+	18000 6350 18000 5350
+Wire Wire Line
+	19000 7350 19000 6350
+Connection ~ 19000 3000
+Wire Wire Line
+	19000 3000 19500 3000
+Connection ~ 19000 3350
+Wire Wire Line
+	19000 3350 19000 3000
+Connection ~ 19000 4350
+Wire Wire Line
+	19000 4350 19000 3350
+Connection ~ 19000 5350
+Wire Wire Line
+	19000 5350 19000 4350
+Connection ~ 19000 6350
+Wire Wire Line
+	19000 6350 19000 5350
+Wire Wire Line
+	20000 7350 20000 5350
+Connection ~ 20000 3000
+Wire Wire Line
+	20000 3000 20500 3000
+Connection ~ 20000 3350
+Wire Wire Line
+	20000 3350 20000 3000
+Connection ~ 20000 5350
+Wire Wire Line
+	20000 5350 20000 3350
+Text GLabel 7000 3000 0    50   Input ~ 0
+tierra
 $EndSCHEMATC

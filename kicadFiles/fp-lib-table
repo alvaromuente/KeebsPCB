@@ -11,4 +11,5 @@
   (lib (name oshLogo)(type KiCad)(uri ${KIPRJMOD}/AcheronLibrary/footprints/oshLogo.pretty)(options "")(descr ""))
   (lib (name keebsLogo)(type KiCad)(uri /home/alvaro/Desktop/AcheronProject/KeebsPCB/graphics/keebsLogo.pretty)(options "")(descr ""))
   (lib (name local)(type KiCad)(uri ${KIPRJMOD}/local.pretty)(options "")(descr ""))
+  (lib (name muente_plate)(type KiCad)(uri ${KIPRJMOD}/muente_plate.pretty)(options "")(descr ""))
 )
