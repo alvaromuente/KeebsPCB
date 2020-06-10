@@ -10,4 +10,5 @@
   (lib (name acheron_SwitchSlots)(type KiCad)(uri ${KIPRJMOD}/AcheronLibrary/footprints/acheron_SwitchSlots.pretty)(options "")(descr ""))
   (lib (name oshLogo)(type KiCad)(uri ${KIPRJMOD}/AcheronLibrary/footprints/oshLogo.pretty)(options "")(descr ""))
   (lib (name keebsLogo)(type KiCad)(uri /home/alvaro/Desktop/AcheronProject/KeebsPCB/graphics/keebsLogo.pretty)(options "")(descr ""))
+  (lib (name local)(type KiCad)(uri ${KIPRJMOD}/local.pretty)(options "")(descr ""))
 )
